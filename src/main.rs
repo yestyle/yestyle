@@ -1,19 +1,36 @@
 use anyhow::Result;
 use chrono::DateTime;
 use rss::Channel;
+use serde_derive::Serialize;
+use std::{fs::File, io::Write, path::PathBuf};
+use tinytemplate::TinyTemplate;
 
 const DATE_FORMAT: &str = "%Y-%m-%d";
 
-#[allow(dead_code)]
+#[derive(Serialize)]
 struct BlogPost {
     title: String,
     date: String,
     url: String,
 }
 
+#[derive(Serialize)]
+struct Context {
+    blog_posts: Vec<BlogPost>,
+}
+
 #[tokio::main]
 async fn main() -> Result<()> {
-    let _blog_posts = blog_posts().await?;
+    let blog_posts = blog_posts().await?;
+
+    let mut tt = TinyTemplate::new();
+    tt.add_template("readme", README_TEMPLATE)?;
+    let context = Context { blog_posts };
+
+    let mut path = PathBuf::from(env!("CARGO_MANIFEST_DIR"));
+    path.push("README.md");
+    let mut file = File::create(path)?;
+    file.write_all(tt.render("readme", &context)?.as_bytes())?;
 
     Ok(())
 }
@@ -48,3 +65,11 @@ async fn blog_posts() -> Result<Vec<BlogPost>> {
         })
         .collect::<Result<Vec<_>>>()
 }
+
+const README_TEMPLATE: &str = r#"
+## Recent Blog Posts
+
+{{ for post in blog_posts }}- [{post.title}]({post.url}) - {post.date}
+{{ endfor }}
+
+"#;
