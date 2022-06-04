@@ -40,11 +40,11 @@ async fn blog_posts() -> Result<Vec<BlogPost>> {
         .await?
         .bytes()
         .await?;
-    let mut channel = Channel::read_from(&content[..])?;
+    let channel = Channel::read_from(&content[..])?;
     channel
         .items
-        .splice(0..5, None)
         .into_iter()
+        .filter(|i| i.author().is_some() && i.author().unwrap() == "Philip Ye")
         .map(|i| {
             let title = i
                 .title()
@@ -63,6 +63,8 @@ async fn blog_posts() -> Result<Vec<BlogPost>> {
                     .to_string(),
             })
         })
+        .collect::<Vec<_>>()
+        .splice(0..5, None)
         .collect::<Result<Vec<_>>>()
 }
 
