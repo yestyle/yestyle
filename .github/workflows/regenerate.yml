@@ -1,0 +1,40 @@
+name: Regenerate profile README.md
+
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: "33 4 * * *"
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    environment: "Profile regeneration"
+    steps:
+      - uses: actions/checkout@v2
+      - name: Cache cargo & target directories
+        uses: Swatinem/rust-cache@v1
+      - name: Install toolchain
+        uses: actions-rs/toolchain@v1
+        with:
+          profile: default
+          toolchain: stable
+          override: true
+      - name: Run cargo build
+        uses: actions-rs/cargo@v1
+        with:
+          command: build --release
+      - name: Configure Git
+        run: |
+          git config --global user.email "yesbot@lancitou.net"
+          git config --global user.name "YesBot"
+      - name: Commit and push if changed
+        run: |
+          set -e
+          set -x
+          RUST_LOG=debug GITHUB_TOKEN=${{ github.token }} ./target/release/yestyle
+          if [[ `git status --porcelain` ]]; then
+              git commit -a -m 'Regenerated profile README.md'
+              git push
+          fi
