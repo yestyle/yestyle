@@ -34,7 +34,7 @@ jobs:
         run: |
           set -e
           set -x
-          RUST_LOG=debug GITHUB_TOKEN=${{ github.token }} ./target/release/yestyle
+          RUST_LOG=debug GITHUB_TOKEN=${{ github.token }} ./target/release/grg
           if [[ `git status --porcelain` ]]; then
               git commit -a -m 'Regenerated profile README.md'
               git push
