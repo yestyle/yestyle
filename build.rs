@@ -1,16 +1,15 @@
 use anyhow::Result;
-use std::{fs::File, io::copy};
+use std::{fs::File, io::Write};
 
-#[allow(dead_code)]
 const SCHEMA_URL: &str =
     "https://raw.githubusercontent.com/octokit/graphql-schema/master/schema.graphql";
+const SCHEMA_FILE: &str = "graphql/github_schema.graphql";
 
 #[tokio::main]
 async fn main() -> Result<()> {
-    let response = reqwest::get(SCHEMA_URL).await?;
-    let content = response.text().await?;
+    let content = reqwest::get(SCHEMA_URL).await?.text().await?;
+    let mut file = File::create(SCHEMA_FILE)?;
+    file.write_all(content.as_bytes())?;
 
-    let mut dest = File::create("graphql/github_schema.graphql")?;
-    copy(&mut content.as_bytes(), &mut dest)?;
     Ok(())
 }
