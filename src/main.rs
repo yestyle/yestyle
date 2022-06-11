@@ -1,11 +1,17 @@
 use anyhow::Result;
 use chrono::DateTime;
+use graphql_client::{reqwest::post_graphql, GraphQLQuery};
+use reqwest::Client;
 use rss::Channel;
 use serde_derive::Serialize;
-use std::{fs::File, io::Write, path::PathBuf};
+use std::{env, fs::File, io::Write, path::PathBuf};
 use tinytemplate::TinyTemplate;
 
+const VERSION: &str = env!("CARGO_PKG_VERSION");
+
 const DATE_FORMAT: &str = "%Y-%m-%d";
+
+const API_URL: &str = "https://api.github.com/graphql";
 
 #[derive(Serialize)]
 struct BlogPost {
@@ -13,6 +19,17 @@ struct BlogPost {
     date: String,
     url: String,
 }
+
+#[allow(clippy::upper_case_acronyms)]
+type URI = String;
+
+#[derive(GraphQLQuery)]
+#[graphql(
+    schema_path = "graphql/github_schema.graphql",
+    query_path = "graphql/github_queries.graphql",
+    response_derives = "Debug"
+)]
+struct RepoView;
 
 #[derive(Serialize)]
 struct Context {
@@ -22,6 +39,30 @@ struct Context {
 #[tokio::main]
 async fn main() -> Result<()> {
     let blog_posts = blog_posts().await?;
+
+    let token = env::var("GITHUB_TOKEN")
+        .expect("You must set the GITHUB_TOKEN env var when running this program");
+    let bearer = format!("Bearer {}", token);
+    let client = Client::builder()
+        .user_agent(format!("github-readme-generator/{}", VERSION))
+        .default_headers(
+            std::iter::once((
+                reqwest::header::AUTHORIZATION,
+                reqwest::header::HeaderValue::from_str(&bearer)
+                    .unwrap_or_else(|e| panic!("Could not parse header from '{bearer}': {e}")),
+            ))
+            .collect(),
+        )
+        .build()?;
+
+    let variables = repo_view::Variables {
+        owner: "yestyle".into(),
+        name: "yestyle".into(),
+    };
+
+    let response_body = post_graphql::<RepoView, _>(&client, API_URL, variables).await?;
+
+    println!("{:?}", response_body);
 
     let mut tt = TinyTemplate::new();
     tt.add_template("readme", README_TEMPLATE)?;
