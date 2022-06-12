@@ -1,6 +1,5 @@
 use anyhow::Result;
-use chrono::DateTime;
-use graphql_client::{reqwest::post_graphql, GraphQLQuery};
+use graphql_client::{reqwest::post_graphql, GraphQLQuery, Response};
 use reqwest::Client;
 use rss::Channel;
 use serde_derive::Serialize;
@@ -8,6 +7,9 @@ use std::{env, fs::File, io::Write, path::PathBuf};
 use tinytemplate::TinyTemplate;
 
 const VERSION: &str = env!("CARGO_PKG_VERSION");
+
+const MY_LOGIN: &str = "yestyle";
+const MY_EMAIL: &str = "yestyle@gmail.com";
 
 const DATE_FORMAT: &str = "%Y-%m-%d";
 
@@ -22,6 +24,7 @@ struct BlogPost {
 
 #[allow(clippy::upper_case_acronyms)]
 type URI = String;
+type DateTime = String;
 
 #[derive(GraphQLQuery)]
 #[graphql(
@@ -29,11 +32,66 @@ type URI = String;
     query_path = "graphql/github_queries.graphql",
     response_derives = "Debug"
 )]
-struct RepoView;
+struct UserContributedReposQuery;
 
 #[derive(Serialize)]
 struct Context {
     blog_posts: Vec<BlogPost>,
+}
+
+struct GitCommit {
+    url: URI,
+    message: String,
+    date: DateTime,
+}
+
+#[derive(Default)]
+struct UserContributedReposStats {
+    repo_owner: String,
+    repo_name: String,
+    commits: Vec<GitCommit>,
+}
+
+async fn user_query(
+    client: &Client,
+    after: Option<String>,
+) -> Result<Response<<UserContributedReposQuery as GraphQLQuery>::ResponseData>> {
+    for i in 1..5 {
+        let vars = user_contributed_repos_query::Variables {
+            login: MY_LOGIN.to_string(),
+            email: MY_EMAIL.to_string(),
+            after: after.clone(),
+        };
+        let resp = post_graphql::<UserContributedReposQuery, _>(client, API_URL, vars).await?;
+        if let Some(errors) = resp.errors {
+            eprintln!("user query attempt #{i}: {}", errors[0].message);
+        } else {
+            return Ok(resp);
+        }
+    }
+    panic!("Could not get results for user query after 5 attempts");
+}
+
+async fn get_user_contributed_commits(client: &Client) -> Result<Vec<UserContributedReposStats>> {
+    let mut stats = Vec::new();
+    let mut after = None;
+
+    loop {
+        let resp = user_query(client, after).await?;
+        let user = resp
+            .data
+            .unwrap_or_else(|| panic!("Response for user repos has no data"))
+            .user
+            .unwrap_or_else(|| panic!("Response data for user repos has no user"));
+
+        if user.repositories_contributed_to.page_info.has_next_page {
+            after = user.repositories_contributed_to.page_info.end_cursor;
+        } else {
+            break;
+        }
+    }
+
+    Ok(stats)
 }
 
 #[tokio::main]
@@ -55,14 +113,7 @@ async fn main() -> Result<()> {
         )
         .build()?;
 
-    let variables = repo_view::Variables {
-        owner: "yestyle".into(),
-        name: "yestyle".into(),
-    };
-
-    let response_body = post_graphql::<RepoView, _>(&client, API_URL, variables).await?;
-
-    println!("{:?}", response_body);
+    let user_contributed_commits = get_user_contributed_commits(&client).await?;
 
     let mut tt = TinyTemplate::new();
     tt.add_template("readme", README_TEMPLATE)?;
@@ -90,7 +141,7 @@ async fn blog_posts() -> Result<Vec<BlogPost>> {
             let title = i
                 .title()
                 .unwrap_or_else(|| panic!("Blog post has no title"));
-            let dt = DateTime::parse_from_rfc2822(
+            let dt = chrono::DateTime::parse_from_rfc2822(
                 i.pub_date()
                     .as_ref()
                     .unwrap_or_else(|| panic!("Blog post '{title}', has no publication date")),

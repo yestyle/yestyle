@@ -1,23 +1,45 @@
-query RepoView($owner: String!, $name: String!) {
-  repository(owner: $owner, name: $name) {
-    homepageUrl
-    stargazers {
-      totalCount
-    }
-    issues(first: 20, states: OPEN) {
-      nodes {
-        title
-        comments {
-          totalCount
-        }
+query UserContributedReposQuery($login:String!, $email:String!, $after:String) {
+  user(login: $login) {
+    repositoriesContributedTo(
+      after: $after,
+      contributionTypes: [COMMIT],
+      first: 100,
+      includeUserRepositories: true,
+      orderBy: {
+        direction: ASC,
+        field: NAME,
+      },
+      privacy: PUBLIC,
+    ) {
+      pageInfo {
+        endCursor
+        hasNextPage
       }
-    }
-    pullRequests(first: 20, states: OPEN) {
       nodes {
-        title
-        commits {
-          totalCount
+        defaultBranchRef {
+          target {
+            __typename
+            ... on Commit {
+              history(
+                author: {
+                  emails: [$email],
+                },
+              ) {
+                nodes {
+                  commitUrl
+                  authoredDate
+                  message
+                }
+              }
+            }
+          }
         }
+        nameWithOwner
+        owner {
+          __typename
+          login
+        }
+        url
       }
     }
   }
