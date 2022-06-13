@@ -37,15 +37,17 @@ struct UserContributedReposQuery;
 #[derive(Serialize)]
 struct Context {
     blog_posts: Vec<BlogPost>,
+    contributed_commits: Vec<UserContributedReposStats>,
 }
 
+#[derive(Serialize)]
 struct GitCommit {
     url: URI,
     message: String,
     date: DateTime,
 }
 
-#[derive(Default)]
+#[derive(Default, Serialize)]
 struct UserContributedReposStats {
     repo_owner: String,
     repo_name: String,
@@ -78,14 +80,72 @@ async fn get_user_contributed_commits(client: &Client) -> Result<Vec<UserContrib
 
     loop {
         let resp = user_query(client, after).await?;
-        let user = resp
+        let contributions = resp
             .data
             .unwrap_or_else(|| panic!("Response for user repos has no data"))
             .user
-            .unwrap_or_else(|| panic!("Response data for user repos has no user"));
+            .unwrap_or_else(|| panic!("Response data for user repos has no user"))
+            .repositories_contributed_to;
 
-        if user.repositories_contributed_to.page_info.has_next_page {
-            after = user.repositories_contributed_to.page_info.end_cursor;
+        for repo in contributions
+            .nodes
+            .expect("Contributions response has no nodes")
+            .into_iter()
+            .flatten()
+        {
+            if repo.name == MY_LOGIN {
+                continue;
+            }
+            let mut commits = Vec::new();
+            match repo
+                .default_branch_ref
+                .unwrap_or_else(|| {
+                    panic!(
+                        "Could not get default branch ref for repo {}",
+                        repo.name_with_owner
+                    )
+                })
+                .target
+            {
+                Some(user_contributed_repos_query::UserContributedReposQueryUserRepositoriesContributedToNodesDefaultBranchRefTarget::Commit(c)) => {
+                    let nodes = c.history.nodes.unwrap_or_else(|| {
+                        panic!(
+                            "Could not get history nodes for repo {}",
+                            repo.name_with_owner
+                        )
+                    });
+                    if nodes.is_empty() {
+                        continue;
+                    }
+                    for node in nodes.iter() {
+                        let commit = node.as_ref().unwrap_or_else(|| {
+                            panic!(
+                                "Could not get commit node for repo {}",
+                                repo.name_with_owner
+                            )
+                        });
+                        let authored_date = chrono::DateTime::parse_from_rfc3339(&commit.authored_date)
+                        .unwrap_or_else(|e| {
+                            panic!("Could not parse '{}' as RFC3339 datetime: {e}", commit.authored_date)
+                        })
+                        .with_timezone(&chrono::Utc)
+                        .format(DATE_FORMAT)
+                        .to_string();
+
+                        commits.push(GitCommit { url: commit.commit_url.clone(), message: commit.message_headline.clone(), date: authored_date });
+                    }
+                }
+                _ => continue,
+            }
+            stats.push(UserContributedReposStats {
+                repo_owner: repo.owner.login,
+                repo_name: repo.name,
+                commits,
+            })
+        }
+
+        if contributions.page_info.has_next_page {
+            after = contributions.page_info.end_cursor;
         } else {
             break;
         }
@@ -113,11 +173,14 @@ async fn main() -> Result<()> {
         )
         .build()?;
 
-    let user_contributed_commits = get_user_contributed_commits(&client).await?;
+    let contributed_commits = get_user_contributed_commits(&client).await?;
 
     let mut tt = TinyTemplate::new();
     tt.add_template("readme", README_TEMPLATE)?;
-    let context = Context { blog_posts };
+    let context = Context {
+        blog_posts,
+        contributed_commits,
+    };
 
     let mut path = PathBuf::from(env!("CARGO_MANIFEST_DIR"));
     path.push("README.md");
@@ -171,5 +234,10 @@ https://github.com/autarch/autarch.
 
 {{ for post in blog_posts }}- [{post.title}]({post.url}) - {post.date}
 {{ endfor }}
+
+## Recent Contributed Commits
+
+{{ for repo in contributed_commits }}{{ for commit in repo.commits }}- {repo.repo_owner}/{repo.repo_name} - [{commit.message}]({commit.url}) - {commit.date}
+{{ endfor }}{{ endfor }}
 
 "#;
