@@ -14,3 +14,10 @@ https://github.com/autarch/autarch.
 - [Search device nodes in Qt](https://blog.lancitou.net/search-device-nodes-in-qt/) - 2021-04-17
 
 
+## Recent Contributed Commits
+
+- yestyle/imx-gst1.0-plugin - [Fix invalid memory access in VPU](https://github.com/yestyle/imx-gst1.0-plugin/commit/9cff161193e9a119deda97a510841cc072451967) - 2021-07-20
+- NXPmicro/mfgtools - [Fix uuu_version in generated uuu.inputlog in shell mode](https://github.com/NXPmicro/mfgtools/commit/1dc59a15bae7f52e70c8d5b7b790bcfd7960bdaa) - 2022-04-16
+- NXPmicro/mfgtools - [Fix argument names in print_cfg()](https://github.com/NXPmicro/mfgtools/commit/f4578c351ed167aeafa3001e7042b2c0210155df) - 2022-04-11
+
+
