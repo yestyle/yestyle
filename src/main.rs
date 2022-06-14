@@ -37,21 +37,16 @@ struct UserContributedReposQuery;
 #[derive(Serialize)]
 struct Context {
     blog_posts: Vec<BlogPost>,
-    contributed_commits: Vec<UserContributedReposStats>,
+    contributed_commits: Vec<ContributedCommit>,
 }
 
 #[derive(Serialize)]
-struct GitCommit {
-    url: URI,
-    message: String,
-    date: DateTime,
-}
-
-#[derive(Default, Serialize)]
-struct UserContributedReposStats {
+struct ContributedCommit {
     repo_owner: String,
     repo_name: String,
-    commits: Vec<GitCommit>,
+    commit_url: URI,
+    commit_headline: String,
+    commit_date: DateTime,
 }
 
 async fn user_query(
@@ -74,8 +69,8 @@ async fn user_query(
     panic!("Could not get results for user query after 5 attempts");
 }
 
-async fn get_user_contributed_commits(client: &Client) -> Result<Vec<UserContributedReposStats>> {
-    let mut stats = Vec::new();
+async fn get_user_contributed_commits(client: &Client) -> Result<Vec<ContributedCommit>> {
+    let mut commits = Vec::new();
     let mut after = None;
 
     loop {
@@ -96,7 +91,6 @@ async fn get_user_contributed_commits(client: &Client) -> Result<Vec<UserContrib
             if repo.name == MY_LOGIN {
                 continue;
             }
-            let mut commits = Vec::new();
             match repo
                 .default_branch_ref
                 .unwrap_or_else(|| {
@@ -132,16 +126,17 @@ async fn get_user_contributed_commits(client: &Client) -> Result<Vec<UserContrib
                         .format(DATE_FORMAT)
                         .to_string();
 
-                        commits.push(GitCommit { url: commit.commit_url.clone(), message: commit.message_headline.clone(), date: committed_date });
+                        commits.push(ContributedCommit {
+                            repo_owner: repo.owner.login.clone(),
+                            repo_name: repo.name.clone(),
+                            commit_url: commit.commit_url.clone(),
+                            commit_headline: commit.message_headline.clone(),
+                            commit_date: committed_date
+                        });
                     }
                 }
                 _ => continue,
             }
-            stats.push(UserContributedReposStats {
-                repo_owner: repo.owner.login,
-                repo_name: repo.name,
-                commits,
-            })
         }
 
         if contributions.page_info.has_next_page {
@@ -151,7 +146,7 @@ async fn get_user_contributed_commits(client: &Client) -> Result<Vec<UserContrib
         }
     }
 
-    Ok(stats)
+    Ok(commits)
 }
 
 #[tokio::main]
@@ -237,7 +232,7 @@ https://github.com/autarch/autarch.
 
 ## Recent Commits
 
-{{ for repo in contributed_commits }}{{ for commit in repo.commits }}- {repo.repo_owner}/{repo.repo_name} - [{commit.message}]({commit.url}) - {commit.date}
-{{ endfor }}{{ endfor }}
+{{ for commit in contributed_commits }}- {commit.repo_owner}/{commit.repo_name} - [{commit.commit_headline}]({commit.commit_url}) - {commit.commit_date}
+{{ endfor }}
 
 "#;
