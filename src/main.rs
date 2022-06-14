@@ -124,15 +124,15 @@ async fn get_user_contributed_commits(client: &Client) -> Result<Vec<UserContrib
                                 repo.name_with_owner
                             )
                         });
-                        let authored_date = chrono::DateTime::parse_from_rfc3339(&commit.authored_date)
+                        let committed_date = chrono::DateTime::parse_from_rfc3339(&commit.committed_date)
                         .unwrap_or_else(|e| {
-                            panic!("Could not parse '{}' as RFC3339 datetime: {e}", commit.authored_date)
+                            panic!("Could not parse '{}' as RFC3339 datetime: {e}", commit.committed_date)
                         })
                         .with_timezone(&chrono::Utc)
                         .format(DATE_FORMAT)
                         .to_string();
 
-                        commits.push(GitCommit { url: commit.commit_url.clone(), message: commit.message_headline.clone(), date: authored_date });
+                        commits.push(GitCommit { url: commit.commit_url.clone(), message: commit.message_headline.clone(), date: committed_date });
                     }
                 }
                 _ => continue,
@@ -235,7 +235,7 @@ https://github.com/autarch/autarch.
 {{ for post in blog_posts }}- [{post.title}]({post.url}) - {post.date}
 {{ endfor }}
 
-## Recent Contributed Commits
+## Recent Commits
 
 {{ for repo in contributed_commits }}{{ for commit in repo.commits }}- {repo.repo_owner}/{repo.repo_name} - [{commit.message}]({commit.url}) - {commit.date}
 {{ endfor }}{{ endfor }}

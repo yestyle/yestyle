@@ -27,7 +27,7 @@ query UserContributedReposQuery($login:String!, $email:String!, $after:String) {
               ) {
                 nodes {
                   commitUrl
-                  authoredDate
+                  committedDate
                   messageHeadline
                 }
               }
