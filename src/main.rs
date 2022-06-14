@@ -146,6 +146,8 @@ async fn get_user_contributed_commits(client: &Client) -> Result<Vec<Contributed
         }
     }
 
+    commits.sort_by(|a, b| b.commit_date.cmp(&a.commit_date));
+
     Ok(commits)
 }
 
