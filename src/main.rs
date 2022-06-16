@@ -101,7 +101,7 @@ async fn get_user_contributed_commits(client: &Client) -> Result<Vec<Contributed
                 })
                 .target
             {
-                Some(user_contributed_repos_query::UserContributedReposQueryUserRepositoriesContributedToNodesDefaultBranchRefTarget::Commit(c)) => {
+                Some(user_contributed_repos_query::ReposNodesDefaultBranchRefTarget::Commit(c)) => {
                     let nodes = c.history.nodes.unwrap_or_else(|| {
                         panic!(
                             "Could not get history nodes for repo {}",
@@ -118,20 +118,24 @@ async fn get_user_contributed_commits(client: &Client) -> Result<Vec<Contributed
                                 repo.name_with_owner
                             )
                         });
-                        let committed_date = chrono::DateTime::parse_from_rfc3339(&commit.committed_date)
-                        .unwrap_or_else(|e| {
-                            panic!("Could not parse '{}' as RFC3339 datetime: {e}", commit.committed_date)
-                        })
-                        .with_timezone(&chrono::Utc)
-                        .format(DATE_FORMAT)
-                        .to_string();
+                        let committed_date =
+                            chrono::DateTime::parse_from_rfc3339(&commit.committed_date)
+                                .unwrap_or_else(|e| {
+                                    panic!(
+                                        "Could not parse '{}' as RFC3339 datetime: {e}",
+                                        commit.committed_date
+                                    )
+                                })
+                                .with_timezone(&chrono::Utc)
+                                .format(DATE_FORMAT)
+                                .to_string();
 
                         commits.push(ContributedCommit {
                             repo_owner: repo.owner.login.clone(),
                             repo_name: repo.name.clone(),
                             commit_url: commit.commit_url.clone(),
                             commit_headline: commit.message_headline.clone(),
-                            commit_date: committed_date
+                            commit_date: committed_date,
                         });
                     }
                 }
