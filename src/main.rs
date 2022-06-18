@@ -37,7 +37,7 @@ struct UserContributedReposQuery;
 #[derive(Serialize)]
 struct Context {
     blog_posts: Vec<BlogPost>,
-    contributed_commits: Vec<ContributedCommit>,
+    recent_commits: Vec<ContributedCommit>,
 }
 
 #[derive(Serialize)]
@@ -69,7 +69,7 @@ async fn user_query(
     panic!("Could not get results for user query after 5 attempts");
 }
 
-async fn get_user_contributed_commits(client: &Client) -> Result<Vec<ContributedCommit>> {
+async fn get_user_recent_commits(client: &Client) -> Result<Vec<ContributedCommit>> {
     let mut commits = Vec::new();
     let mut after = None;
 
@@ -174,13 +174,13 @@ async fn main() -> Result<()> {
         )
         .build()?;
 
-    let contributed_commits = get_user_contributed_commits(&client).await?;
+    let recent_commits = get_user_recent_commits(&client).await?;
 
     let mut tt = TinyTemplate::new();
     tt.add_template("readme", README_TEMPLATE)?;
     let context = Context {
         blog_posts,
-        contributed_commits,
+        recent_commits,
     };
 
     let mut path = PathBuf::from(env!("CARGO_MANIFEST_DIR"));
@@ -238,7 +238,7 @@ https://github.com/autarch/autarch.
 
 ## Recent Commits
 
-{{ for commit in contributed_commits }}- {commit.repo_owner}/{commit.repo_name} - [{commit.commit_headline}]({commit.commit_url}) - {commit.commit_date}
+{{ for commit in recent_commits }}- {commit.repo_owner}/{commit.repo_name} - [{commit.commit_headline}]({commit.commit_url}) - {commit.commit_date}
 {{ endfor }}
 
 "#;
