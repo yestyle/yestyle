@@ -49,7 +49,7 @@ struct ContributedCommit {
     commit_date: DateTime,
 }
 
-async fn user_query(
+async fn user_contribution_query(
     client: &Client,
     after: Option<String>,
 ) -> Result<Response<user_contributed_repos_query::ResponseData>> {
@@ -61,12 +61,15 @@ async fn user_query(
         };
         let resp = post_graphql::<UserContributedReposQuery, _>(client, API_URL, vars).await?;
         if let Some(errors) = resp.errors {
-            eprintln!("user query attempt #{i}: {}", errors[0].message);
+            eprintln!(
+                "user contribution query attempt #{i}: {}",
+                errors[0].message
+            );
         } else {
             return Ok(resp);
         }
     }
-    panic!("Could not get results for user query after 5 attempts");
+    panic!("Could not get results for user contribution query after 5 attempts");
 }
 
 async fn get_user_recent_commits(client: &Client) -> Result<Vec<ContributedCommit>> {
@@ -74,7 +77,7 @@ async fn get_user_recent_commits(client: &Client) -> Result<Vec<ContributedCommi
     let mut after = None;
 
     loop {
-        let resp = user_query(client, after).await?;
+        let resp = user_contribution_query(client, after).await?;
         let contributions = resp
             .data
             .unwrap_or_else(|| panic!("Response for user repos has no data"))
