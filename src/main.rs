@@ -52,7 +52,7 @@ struct ContributedCommit {
 async fn user_query(
     client: &Client,
     after: Option<String>,
-) -> Result<Response<<UserContributedReposQuery as GraphQLQuery>::ResponseData>> {
+) -> Result<Response<user_contributed_repos_query::ResponseData>> {
     for i in 1..5 {
         let vars = user_contributed_repos_query::Variables {
             login: MY_LOGIN.to_string(),
