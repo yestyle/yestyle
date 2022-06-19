@@ -12,6 +12,7 @@ fragment Repos on RepositoryConnection {
             author: {
               emails: [$email],
             },
+            first: 5,
           ) {
             nodes {
               commitUrl
@@ -22,6 +23,7 @@ fragment Repos on RepositoryConnection {
         }
       }
     }
+    isArchived
     name
     nameWithOwner
     owner {
