@@ -19,9 +19,7 @@ https://github.com/autarch/autarch.
 - yestyle/sudoku-solver - [Initial commit](https://github.com/yestyle/sudoku-solver/commit/8c6d804a7e50c24578f8db1027bdeca9d37247d3) - 2022-06-13
 - yestyle/hugo-natrium-theme - [Upload a new logo with transparent background](https://github.com/yestyle/hugo-natrium-theme/commit/942311e76df68aebce592156d990d85871e94265) - 2022-06-05
 - NXPmicro/mfgtools - [Fix uuu_version in generated uuu.inputlog in shell mode](https://github.com/NXPmicro/mfgtools/commit/1dc59a15bae7f52e70c8d5b7b790bcfd7960bdaa) - 2022-04-17
-- yestyle/mfgtools - [Fix uuu_version in generated uuu.inputlog in shell mode](https://github.com/yestyle/mfgtools/commit/135347eac01f118369aa3d8ca07ac28ea607a3e1) - 2022-04-16
 - NXPmicro/mfgtools - [Fix argument names in print_cfg()](https://github.com/NXPmicro/mfgtools/commit/f4578c351ed167aeafa3001e7042b2c0210155df) - 2022-04-11
-- yestyle/mfgtools - [Fix argument names in print_cfg()](https://github.com/yestyle/mfgtools/commit/f4578c351ed167aeafa3001e7042b2c0210155df) - 2022-04-11
 - yestyle/libusb-rs - [Add Version::to_bcd()](https://github.com/yestyle/libusb-rs/commit/7870453a8eedfbc89594ba8abd72ba89c43b3fb9) - 2022-03-30
 - yestyle/libusb-rs - [Add Device::port_number()](https://github.com/yestyle/libusb-rs/commit/afe6be24cb8998d5bab0ea595b23fe401c6612ec) - 2022-03-30
 - yestyle/imx-gst1.0-plugin - [Fix invalid memory access in VPU](https://github.com/yestyle/imx-gst1.0-plugin/commit/9cff161193e9a119deda97a510841cc072451967) - 2021-07-20
