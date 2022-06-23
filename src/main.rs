@@ -260,6 +260,7 @@ async fn get_user_recent_commits(client: &Client) -> Result<Vec<ContributedCommi
     }
 
     commits.sort_by(|a, b| b.commit_date.cmp(&a.commit_date));
+    commits.dedup_by(|a, b| a.commit_headline == b.commit_headline);
 
     Ok(commits)
 }
