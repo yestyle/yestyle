@@ -119,7 +119,7 @@ async fn get_user_recent_commits(client: &Client) -> Result<Vec<ContributedCommi
             .into_iter()
             .flatten()
         {
-            if repo.name == MY_LOGIN {
+            if repo.owner.login == MY_LOGIN {
                 continue;
             }
             match repo
