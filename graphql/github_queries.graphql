@@ -57,7 +57,7 @@ query UserContributedReposQuery($login:String!, $email:String!, $after:String) {
       after: $after,
       contributionTypes: [COMMIT],
       first: 100,
-      includeUserRepositories: true,
+      includeUserRepositories: false,
       orderBy: {
         direction: ASC,
         field: NAME,
