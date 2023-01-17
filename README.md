@@ -18,6 +18,7 @@ https://github.com/autarch/autarch.
 
 - yestyle/extract-ikconfig-rs - [Bump version to 0.1.4](https://github.com/yestyle/extract-ikconfig-rs/commit/f61ef917c637248432b54bca82052cc20816d5ff) - 2023-01-17
 - yestyle/extract-ikconfig-rs - [Update bzip2 to 0.4.4 to fix CVE-2023-22895](https://github.com/yestyle/extract-ikconfig-rs/commit/90a712acd1b51e5b4815ab7a565e5694aa831edf) - 2023-01-17
+- yestyle/yestyle - [Revert &quot;Disable schedule regenerate until the build is fixed&quot;](https://github.com/yestyle/yestyle/commit/bb1499c81efe6f422d97430425e537b6579d8d7d) - 2023-01-17
 - yestyle/yestyle - [Fix clippy errors](https://github.com/yestyle/yestyle/commit/40880435576e448cd22dbc119f6b8535f264c2d3) - 2023-01-17
 - yestyle/yestyle - [Remove UserReposQuery to restore the functionality of UserContributed…](https://github.com/yestyle/yestyle/commit/d4d8b80505b0c8ffcad3aeb2c7a7f32c6c74fb44) - 2023-01-17
 - yestyle/imx-vpuwrap-rs - [Bump version to 0.1.1](https://github.com/yestyle/imx-vpuwrap-rs/commit/f48a03983d4f1900930ba65cc88dab0e6beea7f4) - 2022-12-22
@@ -37,7 +38,6 @@ https://github.com/autarch/autarch.
 - yestyle/hexsearch - [Add package metadata](https://github.com/yestyle/hexsearch/commit/38f4e599eb6e69a6904fea728b23934268cd0611) - 2022-12-04
 - yestyle/yestyle - [Disable schedule regenerate until the build is fixed](https://github.com/yestyle/yestyle/commit/bdc39e0ae5fc87f8df35e463aa25d8c9ae195e4b) - 2022-07-12
 - yestyle/yestyle - [Disable &quot;includeUserRepositories&quot; in &quot;repositoriesContributedTo&quot;](https://github.com/yestyle/yestyle/commit/a3491f309fd88ce63f338805bf5386687bb948f4) - 2022-06-25
-- yestyle/yestyle - [Remove duplicated recent commits with the same message headline](https://github.com/yestyle/yestyle/commit/2914827a84271d5e16d30209490923332cb128fa) - 2022-06-23
 - yestyle/sudoku-solver - [Initial commit](https://github.com/yestyle/sudoku-solver/commit/8c6d804a7e50c24578f8db1027bdeca9d37247d3) - 2022-06-13
 - NXPmicro/mfgtools - [Fix uuu_version in generated uuu.inputlog in shell mode](https://github.com/NXPmicro/mfgtools/commit/1dc59a15bae7f52e70c8d5b7b790bcfd7960bdaa) - 2022-04-17
 - NXPmicro/mfgtools - [Fix argument names in print_cfg()](https://github.com/NXPmicro/mfgtools/commit/f4578c351ed167aeafa3001e7042b2c0210155df) - 2022-04-11
