@@ -7,31 +7,39 @@ https://github.com/autarch/autarch.
 
 ## Recent Blog Posts
 
+- [Resolution 2023 (Philip)](https://blog.lancitou.net/resolution-2023-philip/) - 2023-01-13
 - [Resolution 2022 (Philip)](https://blog.lancitou.net/resolution-2022-philip/) - 2022-06-24
 - [Getting all IP addresses in Qt](https://blog.lancitou.net/getting-all-ip-addresses-in-qt/) - 2021-05-16
 - [Host Hugo as GitHub Pages](https://blog.lancitou.net/host-hugo-as-github-pages/) - 2021-05-16
 - [Build and Run Weston on Ubuntu](https://blog.lancitou.net/build-and-run-weston-on-ubuntu/) - 2021-05-11
-- [新西兰工作签证限制条件变更申请](https://blog.lancitou.net/voc-of-work-visa/) - 2021-05-05
 
 
 ## Recent Commits
 
+- yestyle/extract-ikconfig-rs - [Bump version to 0.1.4](https://github.com/yestyle/extract-ikconfig-rs/commit/f61ef917c637248432b54bca82052cc20816d5ff) - 2023-01-17
+- yestyle/extract-ikconfig-rs - [Update bzip2 to 0.4.4 to fix CVE-2023-22895](https://github.com/yestyle/extract-ikconfig-rs/commit/90a712acd1b51e5b4815ab7a565e5694aa831edf) - 2023-01-17
+- yestyle/yestyle - [Fix clippy errors](https://github.com/yestyle/yestyle/commit/40880435576e448cd22dbc119f6b8535f264c2d3) - 2023-01-17
+- yestyle/yestyle - [Remove UserReposQuery to restore the functionality of UserContributed…](https://github.com/yestyle/yestyle/commit/d4d8b80505b0c8ffcad3aeb2c7a7f32c6c74fb44) - 2023-01-17
+- yestyle/imx-vpuwrap-rs - [Bump version to 0.1.1](https://github.com/yestyle/imx-vpuwrap-rs/commit/f48a03983d4f1900930ba65cc88dab0e6beea7f4) - 2022-12-22
+- yestyle/imx-vpuwrap-rs - [Fix URLs in Cargo.toml and add all target directory to .gitignore](https://github.com/yestyle/imx-vpuwrap-rs/commit/17d648827f477d146c13ef8d1df1118ff04f9248) - 2022-12-22
+- yestyle/imx-vpuwrap-rs - [Initial commit](https://github.com/yestyle/imx-vpuwrap-rs/commit/48058f5c08fc60c9dee0ba0485118a763ffd03cb) - 2022-12-22
+- yestyle/extract-ikconfig-rs - [Use time crate directly instead of chrono to fix CVE-2020-26235](https://github.com/yestyle/extract-ikconfig-rs/commit/2948f2c44ed9b0a2ae135f9081fabce0c127ac0f) - 2022-12-21
+- yestyle/extract-ikconfig-rs - [Bump version to 0.1.3](https://github.com/yestyle/extract-ikconfig-rs/commit/b4000733d3fd60d8cf02598b58709853586fa825) - 2022-12-21
+- yestyle/extract-ikconfig-rs - [Exclude tests/data directory for publishing to crates.io](https://github.com/yestyle/extract-ikconfig-rs/commit/0bd9a4b55df9e15508b7097a4a47ec2bf44980bc) - 2022-12-21
+- yestyle/custom-printer-lib - [Implement printing commands](https://github.com/yestyle/custom-printer-lib/commit/be70a4045457250a03a8293a050210c19c7bc4ae) - 2022-12-20
+- yestyle/custom-printer-lib - [Remove &quot;documentation&quot; in Cargo.toml to use default docs.rs](https://github.com/yestyle/custom-printer-lib/commit/241cdd7da988174b3f7749528a51798c8b84a7c7) - 2022-12-20
+- yestyle/custom-printer-lib - [Add support of printing bit image and cutting paper](https://github.com/yestyle/custom-printer-lib/commit/6ca10d3b2ea5c91c56a2fa82b12f8cb45f960cfc) - 2022-12-20
+- yestyle/custom-printer-lib - [Initial commit](https://github.com/yestyle/custom-printer-lib/commit/4f08079a9c354f25145abb66144eb8767474ed13) - 2022-12-19
+- yestyle/hexsearch - [Update README.md for multiple files searching](https://github.com/yestyle/hexsearch/commit/4e988a1b5ac9d0cac883da72d99a3b62a893107a) - 2022-12-11
+- yestyle/hexsearch - [Add -V/--version argument](https://github.com/yestyle/hexsearch/commit/7df1b7ddfdaf02b9a71003dadb36e69b080a6de6) - 2022-12-09
+- yestyle/hexsearch - [Fix multiple matches within one buffer](https://github.com/yestyle/hexsearch/commit/9e48825ce19eef9442cfb6ad2c7e70056f487af2) - 2022-12-09
+- yestyle/hexsearch - [Update README.md for installing from crates.io](https://github.com/yestyle/hexsearch/commit/cbc1e499df397693ae7b405277be90b8ec771689) - 2022-12-05
+- yestyle/hexsearch - [Add package metadata](https://github.com/yestyle/hexsearch/commit/38f4e599eb6e69a6904fea728b23934268cd0611) - 2022-12-04
+- yestyle/yestyle - [Disable schedule regenerate until the build is fixed](https://github.com/yestyle/yestyle/commit/bdc39e0ae5fc87f8df35e463aa25d8c9ae195e4b) - 2022-07-12
+- yestyle/yestyle - [Disable &quot;includeUserRepositories&quot; in &quot;repositoriesContributedTo&quot;](https://github.com/yestyle/yestyle/commit/a3491f309fd88ce63f338805bf5386687bb948f4) - 2022-06-25
+- yestyle/yestyle - [Remove duplicated recent commits with the same message headline](https://github.com/yestyle/yestyle/commit/2914827a84271d5e16d30209490923332cb128fa) - 2022-06-23
 - yestyle/sudoku-solver - [Initial commit](https://github.com/yestyle/sudoku-solver/commit/8c6d804a7e50c24578f8db1027bdeca9d37247d3) - 2022-06-13
-- yestyle/hugo-natrium-theme - [Upload a new logo with transparent background](https://github.com/yestyle/hugo-natrium-theme/commit/942311e76df68aebce592156d990d85871e94265) - 2022-06-05
 - NXPmicro/mfgtools - [Fix uuu_version in generated uuu.inputlog in shell mode](https://github.com/NXPmicro/mfgtools/commit/1dc59a15bae7f52e70c8d5b7b790bcfd7960bdaa) - 2022-04-17
 - NXPmicro/mfgtools - [Fix argument names in print_cfg()](https://github.com/NXPmicro/mfgtools/commit/f4578c351ed167aeafa3001e7042b2c0210155df) - 2022-04-11
-- yestyle/libusb-rs - [Add Version::to_bcd()](https://github.com/yestyle/libusb-rs/commit/7870453a8eedfbc89594ba8abd72ba89c43b3fb9) - 2022-03-30
-- yestyle/libusb-rs - [Add Device::port_number()](https://github.com/yestyle/libusb-rs/commit/afe6be24cb8998d5bab0ea595b23fe401c6612ec) - 2022-03-30
-- yestyle/imx-gst1.0-plugin - [Fix invalid memory access in VPU](https://github.com/yestyle/imx-gst1.0-plugin/commit/9cff161193e9a119deda97a510841cc072451967) - 2021-07-20
-- yestyle/hugo-natrium-theme - [Revert &quot;Modify the link of code to https://github.com/yestyle/yestyle…](https://github.com/yestyle/hugo-natrium-theme/commit/ce4f7fc8a0c842387f2d744270cf0cf8c0696ae1) - 2021-06-19
-- yestyle/hugo-natrium-theme - [Modify the link of code to https://github.com/yestyle/yestyle.github.io](https://github.com/yestyle/hugo-natrium-theme/commit/a93ae19b5a6ad42cc0285f6ee38edd85abc7a77b) - 2021-05-13
-- yestyle/hugo-natrium-theme - [Upgrade to MathJax 3 and don&#39;t use single dollar for delimiter](https://github.com/yestyle/hugo-natrium-theme/commit/7b05ab24bc649a2079c2a47d1991481cbf5e50ec) - 2021-01-23
-- yestyle/libpcap - [Use SocketCAN as data link type of CAN frame](https://github.com/yestyle/libpcap/commit/4e709dcd1de7c25aac4acc8135f7f1889ce2a185) - 2020-10-02
-- yestyle/hugo-natrium-theme - [Remove version number of Font Awesome in fonts.css](https://github.com/yestyle/hugo-natrium-theme/commit/25847126b295eceb6836b4f0c45de02b3bc95754) - 2020-09-02
-- yestyle/cscope-indexer - [Add -k option for cscope-indexer and modify cscope-indexer(1) accordi…](https://github.com/yestyle/cscope-indexer/commit/261e5fa77ceb8641174024ef42836e56c3c984b0) - 2013-03-03
-- yestyle/cscope-indexer - [Original version of cscope-indexer](https://github.com/yestyle/cscope-indexer/commit/f0d45212d29f225656c17b910b7301999136b9a3) - 2013-03-03
-- yestyle/cscope-indexer - [Initial commit](https://github.com/yestyle/cscope-indexer/commit/c48aab09309caa86ca5ede658ba81f4cf04d9976) - 2013-03-03
-- yestyle/linux - [USB: Remove the duplicate definition of HUB_SET_DEPTH](https://github.com/yestyle/linux/commit/c91043adaf50ef13609003120f3471783460fb71) - 2011-12-12
-- yestyle/linux - [USB: usb-storage: unusual_devs entry for Kingston DT 101 G2](https://github.com/yestyle/linux/commit/cec28a5428793b6bc64e56687fb239759d6da74e) - 2011-11-27
 
 
