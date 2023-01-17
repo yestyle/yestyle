@@ -162,9 +162,9 @@ async fn main() -> Result<()> {
 
     let token = env::var("GITHUB_TOKEN")
         .expect("You must set the GITHUB_TOKEN env var when running this program");
-    let bearer = format!("Bearer {}", token);
+    let bearer = format!("Bearer {token}");
     let client = Client::builder()
-        .user_agent(format!("github-readme-generator/{}", VERSION))
+        .user_agent(format!("github-readme-generator/{VERSION}"))
         .default_headers(
             std::iter::once((
                 reqwest::header::AUTHORIZATION,
