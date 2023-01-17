@@ -34,30 +34,13 @@ fragment Repos on RepositoryConnection {
   }
 }
 
-query UserReposQuery($login: String!, $email: String!, $after: String) {
-  user(login: $login) {
-    createdAt
-    repositories(
-      affiliations: [COLLABORATOR, OWNER],
-      after: $after,
-      orderBy: {
-        direction: ASC,
-        field: NAME,
-      },
-      privacy: PUBLIC,
-    ) {
-      ...Repos
-    }
-  }
-}
-
 query UserContributedReposQuery($login:String!, $email:String!, $after:String) {
   user(login: $login) {
     repositoriesContributedTo(
       after: $after,
       contributionTypes: [COMMIT],
       first: 100,
-      includeUserRepositories: false,
+      includeUserRepositories: true,
       orderBy: {
         direction: ASC,
         field: NAME,

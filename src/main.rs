@@ -34,14 +34,6 @@ type DateTime = String;
 )]
 struct UserContributedReposQuery;
 
-#[derive(GraphQLQuery)]
-#[graphql(
-    schema_path = "graphql/github_schema.graphql",
-    query_path = "graphql/github_queries.graphql",
-    response_derives = "Debug"
-)]
-struct UserReposQuery;
-
 #[derive(Serialize)]
 struct Context {
     blog_posts: Vec<BlogPost>,
@@ -80,26 +72,6 @@ async fn user_contribution_query(
     panic!("Could not get results for user contribution query after 5 attempts");
 }
 
-async fn user_repo_query(
-    client: &Client,
-    after: Option<String>,
-) -> Result<Response<user_repos_query::ResponseData>> {
-    for i in 1..5 {
-        let vars = user_repos_query::Variables {
-            login: MY_LOGIN.to_string(),
-            email: MY_EMAIL.to_string(),
-            after: after.clone(),
-        };
-        let resp = post_graphql::<UserReposQuery, _>(client, API_URL, vars).await?;
-        if let Some(errors) = resp.errors {
-            eprintln!("user repos query attempt #{i}: {}", errors[0].message);
-        } else {
-            return Ok(resp);
-        }
-    }
-    panic!("Could not get results for user repos query after 5 attempts");
-}
-
 async fn get_user_recent_commits(client: &Client) -> Result<Vec<ContributedCommit>> {
     let mut commits = Vec::new();
     let mut after = None;
@@ -119,9 +91,6 @@ async fn get_user_recent_commits(client: &Client) -> Result<Vec<ContributedCommi
             .into_iter()
             .flatten()
         {
-            if repo.owner.login == MY_LOGIN {
-                continue;
-            }
             match repo
                 .default_branch_ref
                 .unwrap_or_else(|| {
@@ -176,84 +145,6 @@ async fn get_user_recent_commits(client: &Client) -> Result<Vec<ContributedCommi
 
         if contributions.page_info.has_next_page {
             after = contributions.page_info.end_cursor;
-        } else {
-            break;
-        }
-    }
-
-    after = None;
-    loop {
-        let resp = user_repo_query(client, after).await?;
-        let repos = resp
-            .data
-            .unwrap_or_else(|| panic!("Response for user repos has no data"))
-            .user
-            .unwrap_or_else(|| panic!("Response data for user repos has no user"))
-            .repositories;
-
-        for repo in repos
-            .nodes
-            .expect("Repos response has no nodes")
-            .into_iter()
-            .flatten()
-        {
-            if repo.name == MY_LOGIN || repo.is_archived {
-                continue;
-            }
-            match repo
-                .default_branch_ref
-                .unwrap_or_else(|| {
-                    panic!(
-                        "Could not get default branch ref for repo {}",
-                        repo.name_with_owner
-                    )
-                })
-                .target
-            {
-                Some(user_repos_query::ReposNodesDefaultBranchRefTarget::Commit(c)) => {
-                    let nodes = c.history.nodes.unwrap_or_else(|| {
-                        panic!(
-                            "Could not get history nodes for repo {}",
-                            repo.name_with_owner
-                        )
-                    });
-                    if nodes.is_empty() {
-                        continue;
-                    }
-                    for node in nodes.iter() {
-                        let commit = node.as_ref().unwrap_or_else(|| {
-                            panic!(
-                                "Could not get commit node for repo {}",
-                                repo.name_with_owner
-                            )
-                        });
-                        let committed_date =
-                            chrono::DateTime::parse_from_rfc3339(&commit.committed_date)
-                                .unwrap_or_else(|e| {
-                                    panic!(
-                                        "Could not parse '{}' as RFC3339 datetime: {e}",
-                                        commit.committed_date
-                                    )
-                                })
-                                .with_timezone(&chrono::Utc)
-                                .format(DATE_FORMAT)
-                                .to_string();
-
-                        commits.push(ContributedCommit {
-                            repo_owner: repo.owner.login.clone(),
-                            repo_name: repo.name.clone(),
-                            commit_url: commit.commit_url.clone(),
-                            commit_headline: commit.message_headline.clone(),
-                            commit_date: committed_date,
-                        });
-                    }
-                }
-                _ => continue,
-            }
-        }
-
-        if repos.page_info.has_next_page {
-            after = repos.page_info.end_cursor;
         } else {
             break;
         }
