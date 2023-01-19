@@ -16,16 +16,15 @@ jobs:
       - name: Cache cargo & target directories
         uses: Swatinem/rust-cache@v2
       - name: Install toolchain
-        uses: actions-rs/toolchain@v1
-        with:
-          profile: default
-          toolchain: stable
-          override: true
+        run: |
+          rustup update
+          rustup component add clippy
       - name: Run cargo build
-        uses: actions-rs/cargo@v1
-        with:
-          command: build
-          args: --release
+        run: |
+          cargo build --release
+      - name: Run cargo clippy
+        run: |
+          cargo clippy
       - name: Configure Git
         run: |
           git config --global user.email "yesbot@lancitou.net"
