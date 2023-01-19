@@ -16,13 +16,13 @@ https://github.com/autarch/autarch.
 
 ## Recent Commits
 
+- yestyle/yestyle - [Use the already-installed rust toolchain in github actions](https://github.com/yestyle/yestyle/commit/6a409f95448c24fc0626169b6cf07504561d9847) - 2023-01-19
 - yestyle/extract-ikconfig-rs - [Bump version to 0.1.4](https://github.com/yestyle/extract-ikconfig-rs/commit/f61ef917c637248432b54bca82052cc20816d5ff) - 2023-01-17
 - yestyle/extract-ikconfig-rs - [Update bzip2 to 0.4.4 to fix CVE-2023-22895](https://github.com/yestyle/extract-ikconfig-rs/commit/90a712acd1b51e5b4815ab7a565e5694aa831edf) - 2023-01-17
 - yestyle/yestyle - [Tweak wording in profile text](https://github.com/yestyle/yestyle/commit/f5099d4027e5dddf29aa55eb49a47dace65a53d6) - 2023-01-17
 - yestyle/yestyle - [Update some actions versions](https://github.com/yestyle/yestyle/commit/3b528f4aec1fc965257f8e88cc5878bed3ae8b78) - 2023-01-17
 - yestyle/yestyle - [Revert &quot;Disable schedule regenerate until the build is fixed&quot;](https://github.com/yestyle/yestyle/commit/bb1499c81efe6f422d97430425e537b6579d8d7d) - 2023-01-17
 - yestyle/yestyle - [Fix clippy errors](https://github.com/yestyle/yestyle/commit/40880435576e448cd22dbc119f6b8535f264c2d3) - 2023-01-17
-- yestyle/yestyle - [Remove UserReposQuery to restore the functionality of UserContributed…](https://github.com/yestyle/yestyle/commit/d4d8b80505b0c8ffcad3aeb2c7a7f32c6c74fb44) - 2023-01-17
 - yestyle/imx-vpuwrap-rs - [Bump version to 0.1.1](https://github.com/yestyle/imx-vpuwrap-rs/commit/f48a03983d4f1900930ba65cc88dab0e6beea7f4) - 2022-12-22
 - yestyle/imx-vpuwrap-rs - [Fix URLs in Cargo.toml and add all target directory to .gitignore](https://github.com/yestyle/imx-vpuwrap-rs/commit/17d648827f477d146c13ef8d1df1118ff04f9248) - 2022-12-22
 - yestyle/imx-vpuwrap-rs - [Initial commit](https://github.com/yestyle/imx-vpuwrap-rs/commit/48058f5c08fc60c9dee0ba0485118a763ffd03cb) - 2022-12-22
