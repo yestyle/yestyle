@@ -16,6 +16,7 @@ https://github.com/autarch/autarch.
 
 ## Recent Commits
 
+- yestyle/hexrw - [Add support to read after write and delay](https://github.com/yestyle/hexrw/commit/d9e76d786df50140833209d7c58c02238fdb38f8) - 2023-01-27
 - yestyle/hexsearch - [Add GitHub Actions on main branch](https://github.com/yestyle/hexsearch/commit/c3b3626309aa7f7288362c128b5b87cd4f18086f) - 2023-01-24
 - yestyle/extract-ikconfig-rs - [Run integration test in release and show output](https://github.com/yestyle/extract-ikconfig-rs/commit/9ed495438c4a9b65ca1040a547d42a7e904d8810) - 2023-01-23
 - yestyle/extract-ikconfig-rs - [Add GitHub Actions](https://github.com/yestyle/extract-ikconfig-rs/commit/590aea77d0e3fc5840a1da019920d47a4705be01) - 2023-01-23
@@ -37,6 +38,7 @@ https://github.com/autarch/autarch.
 - yestyle/hexsearch - [Update README.md for multiple files searching](https://github.com/yestyle/hexsearch/commit/4e988a1b5ac9d0cac883da72d99a3b62a893107a) - 2022-12-11
 - yestyle/hexsearch - [Add -V/--version argument](https://github.com/yestyle/hexsearch/commit/7df1b7ddfdaf02b9a71003dadb36e69b080a6de6) - 2022-12-09
 - yestyle/hexsearch - [Fix multiple matches within one buffer](https://github.com/yestyle/hexsearch/commit/9e48825ce19eef9442cfb6ad2c7e70056f487af2) - 2022-12-09
+- yestyle/hexrw - [Quick implementation of writing binary data in hex format to file](https://github.com/yestyle/hexrw/commit/9b6ace47b92ddee10514cd5545da2dbf5e5c7c49) - 2022-12-06
 - yestyle/hexsearch - [Update README.md for installing from crates.io](https://github.com/yestyle/hexsearch/commit/cbc1e499df397693ae7b405277be90b8ec771689) - 2022-12-05
 - yestyle/sudoku-solver - [Initial commit](https://github.com/yestyle/sudoku-solver/commit/8c6d804a7e50c24578f8db1027bdeca9d37247d3) - 2022-06-13
 - NXPmicro/mfgtools - [Fix uuu_version in generated uuu.inputlog in shell mode](https://github.com/NXPmicro/mfgtools/commit/1dc59a15bae7f52e70c8d5b7b790bcfd7960bdaa) - 2022-04-17
