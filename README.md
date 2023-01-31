@@ -16,14 +16,16 @@ https://github.com/autarch/autarch.
 
 ## Recent Commits
 
-- yestyle/extract-ikconfig-rs - [Update lz4_flex submodule pointer](https://github.com/yestyle/extract-ikconfig-rs/commit/26bba0b936fd25ec701cdc3604c90d3f153a38e1) - 2023-01-27
-- yestyle/extract-ikconfig-rs - [Add pkg-config as prerequisite in README.md](https://github.com/yestyle/extract-ikconfig-rs/commit/2ff839fe1087242999debd556cdb1a0fcd4fef5e) - 2023-01-27
+- yestyle/extract-ikconfig-rs - [Move other search methods to test config](https://github.com/yestyle/extract-ikconfig-rs/commit/ed3e7bf9aec9085942e5fd3739bb901c33266f7c) - 2023-01-30
+- yestyle/extract-ikconfig-rs - [Bump version to 0.1.7](https://github.com/yestyle/extract-ikconfig-rs/commit/06774be09ad8a902d48b80a4820a91e8f0774e2a) - 2023-01-30
+- yestyle/extract-ikconfig-rs - [Update lz4_flex to 0.10.0 to include legacy frame decompression support](https://github.com/yestyle/extract-ikconfig-rs/commit/fb1df0da76b50d61fdc814a0bbc611a55d547f05) - 2023-01-30
+- yestyle/extract-ikconfig-rs - [Bump version to 0.1.6](https://github.com/yestyle/extract-ikconfig-rs/commit/0504f689822911de751cdca6217f2c645049fe42) - 2023-01-30
+- yestyle/extract-ikconfig-rs - [Remove redundant build from source instructions in README.md](https://github.com/yestyle/extract-ikconfig-rs/commit/e6a76ea531457b76573f512d9209acf30fc44a86) - 2023-01-30
+- PSeitz/lz4_flex - [Add a test case for legacy frames decompression](https://github.com/PSeitz/lz4_flex/commit/9f4f79da5dc8d634861b26766fa04f18ff936dfe) - 2023-01-30
+- PSeitz/lz4_flex - [Add support of decoding legacy frames](https://github.com/PSeitz/lz4_flex/commit/ca5bd41bd244a12b5f98eb6bcda1feece0673e96) - 2023-01-30
 - yestyle/hexrw - [Add support to read after write and delay](https://github.com/yestyle/hexrw/commit/d9e76d786df50140833209d7c58c02238fdb38f8) - 2023-01-27
 - yestyle/yestyle - [Upgrade rss to 2.0.2 to fix future incompatibilities warnings in quic…](https://github.com/yestyle/yestyle/commit/c57b0bd4651f04e85c06b77e9ffe30aa05d5e09a) - 2023-01-27
 - yestyle/hexsearch - [Add GitHub Actions on main branch](https://github.com/yestyle/hexsearch/commit/c3b3626309aa7f7288362c128b5b87cd4f18086f) - 2023-01-24
-- yestyle/extract-ikconfig-rs - [Run integration test in release and show output](https://github.com/yestyle/extract-ikconfig-rs/commit/9ed495438c4a9b65ca1040a547d42a7e904d8810) - 2023-01-23
-- yestyle/extract-ikconfig-rs - [Add GitHub Actions](https://github.com/yestyle/extract-ikconfig-rs/commit/590aea77d0e3fc5840a1da019920d47a4705be01) - 2023-01-23
-- yestyle/extract-ikconfig-rs - [Rename master branch to main](https://github.com/yestyle/extract-ikconfig-rs/commit/3c1dbb7ae2f591416b416a1e0c513103e71dd225) - 2023-01-23
 - yestyle/yestyle - [Use the already-installed rust toolchain in github actions](https://github.com/yestyle/yestyle/commit/6a409f95448c24fc0626169b6cf07504561d9847) - 2023-01-19
 - yestyle/yestyle - [Tweak wording in profile text](https://github.com/yestyle/yestyle/commit/f5099d4027e5dddf29aa55eb49a47dace65a53d6) - 2023-01-17
 - yestyle/yestyle - [Update some actions versions](https://github.com/yestyle/yestyle/commit/3b528f4aec1fc965257f8e88cc5878bed3ae8b78) - 2023-01-17
