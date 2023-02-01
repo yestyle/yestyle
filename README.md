@@ -16,11 +16,13 @@ https://github.com/autarch/autarch.
 
 ## Recent Commits
 
+- yestyle/extract-ikconfig-rs - [Replace clap with argh to save ~240KB binary size](https://github.com/yestyle/extract-ikconfig-rs/commit/a03813261f2824594ae428560e3dffebedc6ee83) - 2023-01-31
+- yestyle/extract-ikconfig-rs - [Only enable frame and checked-decode feature in lz4_flex](https://github.com/yestyle/extract-ikconfig-rs/commit/3d70650710fbc7e96b8d455d4336b5e5e3dd6c05) - 2023-01-31
+- yestyle/hexrw - [Optimize release build to have smaller binary size](https://github.com/yestyle/hexrw/commit/fc55a72cc7fbf4844a79b5aefc17aa7cb6ec77be) - 2023-01-31
+- yestyle/hexrw - [Replace clap with argh](https://github.com/yestyle/hexrw/commit/3bae947bed843fbfc035990d4772189bcb1d260c) - 2023-01-31
 - yestyle/extract-ikconfig-rs - [Move other search methods to test config](https://github.com/yestyle/extract-ikconfig-rs/commit/ed3e7bf9aec9085942e5fd3739bb901c33266f7c) - 2023-01-30
 - yestyle/extract-ikconfig-rs - [Bump version to 0.1.7](https://github.com/yestyle/extract-ikconfig-rs/commit/06774be09ad8a902d48b80a4820a91e8f0774e2a) - 2023-01-30
 - yestyle/extract-ikconfig-rs - [Update lz4_flex to 0.10.0 to include legacy frame decompression support](https://github.com/yestyle/extract-ikconfig-rs/commit/fb1df0da76b50d61fdc814a0bbc611a55d547f05) - 2023-01-30
-- yestyle/extract-ikconfig-rs - [Bump version to 0.1.6](https://github.com/yestyle/extract-ikconfig-rs/commit/0504f689822911de751cdca6217f2c645049fe42) - 2023-01-30
-- yestyle/extract-ikconfig-rs - [Remove redundant build from source instructions in README.md](https://github.com/yestyle/extract-ikconfig-rs/commit/e6a76ea531457b76573f512d9209acf30fc44a86) - 2023-01-30
 - PSeitz/lz4_flex - [Add a test case for legacy frames decompression](https://github.com/PSeitz/lz4_flex/commit/9f4f79da5dc8d634861b26766fa04f18ff936dfe) - 2023-01-30
 - PSeitz/lz4_flex - [Add support of decoding legacy frames](https://github.com/PSeitz/lz4_flex/commit/ca5bd41bd244a12b5f98eb6bcda1feece0673e96) - 2023-01-30
 - yestyle/hexrw - [Add support to read after write and delay](https://github.com/yestyle/hexrw/commit/d9e76d786df50140833209d7c58c02238fdb38f8) - 2023-01-27
