@@ -239,7 +239,7 @@ https://github.com/autarch/autarch.
 
 ## Recent Commits
 
-{{ for commit in recent_commits }}- {commit.repo_owner}/{commit.repo_name} - [{commit.commit_headline}]({commit.commit_url}) - {commit.commit_date}
+{{ for commit in recent_commits }}- {commit.repo_owner} / {commit.repo_name} - [{commit.commit_headline}]({commit.commit_url}) - {commit.commit_date}
 {{ endfor }}
 
 "#;
