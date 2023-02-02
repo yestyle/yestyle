@@ -7,11 +7,11 @@ https://github.com/autarch/autarch.
 
 ## Recent Blog Posts
 
+- [scp command couldn&#39;t find sftp-server](https://blog.lancitou.net/scp-command-couldnt-find-sftp-server/) - 2023-02-02
 - [Resolution 2023 (Philip)](https://blog.lancitou.net/resolution-2023-philip/) - 2023-01-13
 - [Resolution 2022 (Philip)](https://blog.lancitou.net/resolution-2022-philip/) - 2022-06-24
 - [Getting all IP addresses in Qt](https://blog.lancitou.net/getting-all-ip-addresses-in-qt/) - 2021-05-16
 - [Host Hugo as GitHub Pages](https://blog.lancitou.net/host-hugo-as-github-pages/) - 2021-05-16
-- [Build and Run Weston on Ubuntu](https://blog.lancitou.net/build-and-run-weston-on-ubuntu/) - 2021-05-11
 
 
 ## Recent Commits
