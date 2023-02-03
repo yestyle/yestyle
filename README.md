@@ -7,7 +7,7 @@ https://github.com/autarch/autarch.
 
 ## Recent Blog Posts
 
-- [scp command couldn&#39;t find sftp-server](https://blog.lancitou.net/scp-command-couldnt-find-sftp-server/) - 2023-02-02
+- [scp command couldn't find sftp-server](https://blog.lancitou.net/scp-command-couldnt-find-sftp-server/) - 2023-02-02
 - [Resolution 2023 (Philip)](https://blog.lancitou.net/resolution-2023-philip/) - 2023-01-13
 - [Resolution 2022 (Philip)](https://blog.lancitou.net/resolution-2022-philip/) - 2022-06-24
 - [Getting all IP addresses in Qt](https://blog.lancitou.net/getting-all-ip-addresses-in-qt/) - 2021-05-16
@@ -16,6 +16,7 @@ https://github.com/autarch/autarch.
 
 ## Recent Commits
 
+- yestyle / yestyle - [Use unescaped formatter of TinyTemplate to have human-readable README.md](https://github.com/yestyle/yestyle/commit/3269e64daaebf83228015b7ac9ab510828dd6b30) - 2023-02-03
 - yestyle / yestyle - [Add spaces around slash in recent commits to have better visibility](https://github.com/yestyle/yestyle/commit/5cc131edede1fb461a7fa109ff6695b00d39e2c8) - 2023-02-01
 - yestyle / extract-ikconfig-rs - [Replace clap with argh to save ~240KB binary size](https://github.com/yestyle/extract-ikconfig-rs/commit/a03813261f2824594ae428560e3dffebedc6ee83) - 2023-01-31
 - yestyle / extract-ikconfig-rs - [Only enable frame and checked-decode feature in lz4_flex](https://github.com/yestyle/extract-ikconfig-rs/commit/3d70650710fbc7e96b8d455d4336b5e5e3dd6c05) - 2023-01-31
@@ -31,12 +32,11 @@ https://github.com/autarch/autarch.
 - yestyle / hexsearch - [Add GitHub Actions on main branch](https://github.com/yestyle/hexsearch/commit/c3b3626309aa7f7288362c128b5b87cd4f18086f) - 2023-01-24
 - yestyle / yestyle - [Use the already-installed rust toolchain in github actions](https://github.com/yestyle/yestyle/commit/6a409f95448c24fc0626169b6cf07504561d9847) - 2023-01-19
 - yestyle / yestyle - [Tweak wording in profile text](https://github.com/yestyle/yestyle/commit/f5099d4027e5dddf29aa55eb49a47dace65a53d6) - 2023-01-17
-- yestyle / yestyle - [Update some actions versions](https://github.com/yestyle/yestyle/commit/3b528f4aec1fc965257f8e88cc5878bed3ae8b78) - 2023-01-17
 - yestyle / imx-vpuwrap-rs - [Bump version to 0.1.1](https://github.com/yestyle/imx-vpuwrap-rs/commit/f48a03983d4f1900930ba65cc88dab0e6beea7f4) - 2022-12-22
 - yestyle / imx-vpuwrap-rs - [Fix URLs in Cargo.toml and add all target directory to .gitignore](https://github.com/yestyle/imx-vpuwrap-rs/commit/17d648827f477d146c13ef8d1df1118ff04f9248) - 2022-12-22
 - yestyle / imx-vpuwrap-rs - [Initial commit](https://github.com/yestyle/imx-vpuwrap-rs/commit/48058f5c08fc60c9dee0ba0485118a763ffd03cb) - 2022-12-22
 - yestyle / custom-printer-lib - [Implement printing commands](https://github.com/yestyle/custom-printer-lib/commit/be70a4045457250a03a8293a050210c19c7bc4ae) - 2022-12-20
-- yestyle / custom-printer-lib - [Remove &quot;documentation&quot; in Cargo.toml to use default docs.rs](https://github.com/yestyle/custom-printer-lib/commit/241cdd7da988174b3f7749528a51798c8b84a7c7) - 2022-12-20
+- yestyle / custom-printer-lib - [Remove "documentation" in Cargo.toml to use default docs.rs](https://github.com/yestyle/custom-printer-lib/commit/241cdd7da988174b3f7749528a51798c8b84a7c7) - 2022-12-20
 - yestyle / custom-printer-lib - [Add support of printing bit image and cutting paper](https://github.com/yestyle/custom-printer-lib/commit/6ca10d3b2ea5c91c56a2fa82b12f8cb45f960cfc) - 2022-12-20
 - yestyle / custom-printer-lib - [Initial commit](https://github.com/yestyle/custom-printer-lib/commit/4f08079a9c354f25145abb66144eb8767474ed13) - 2022-12-19
 - yestyle / hexsearch - [Update README.md for multiple files searching](https://github.com/yestyle/hexsearch/commit/4e988a1b5ac9d0cac883da72d99a3b62a893107a) - 2022-12-11
