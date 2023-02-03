@@ -178,6 +178,7 @@ async fn main() -> Result<()> {
     let recent_commits = get_user_recent_commits(&client).await?;
 
     let mut tt = TinyTemplate::new();
+    tt.set_default_formatter(&tinytemplate::format_unescaped);
     tt.add_template("readme", README_TEMPLATE)?;
     let context = Context {
         blog_posts,
