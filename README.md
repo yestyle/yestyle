@@ -45,7 +45,7 @@ https://github.com/autarch/autarch.
 - yestyle / hexrw - [Quick implementation of writing binary data in hex format to file](https://github.com/yestyle/hexrw/commit/9b6ace47b92ddee10514cd5545da2dbf5e5c7c49) - 2022-12-06
 - yestyle / hexsearch - [Update README.md for installing from crates.io](https://github.com/yestyle/hexsearch/commit/cbc1e499df397693ae7b405277be90b8ec771689) - 2022-12-05
 - yestyle / sudoku-solver - [Initial commit](https://github.com/yestyle/sudoku-solver/commit/8c6d804a7e50c24578f8db1027bdeca9d37247d3) - 2022-06-13
-- NXPmicro / mfgtools - [Fix uuu_version in generated uuu.inputlog in shell mode](https://github.com/NXPmicro/mfgtools/commit/1dc59a15bae7f52e70c8d5b7b790bcfd7960bdaa) - 2022-04-17
-- NXPmicro / mfgtools - [Fix argument names in print_cfg()](https://github.com/NXPmicro/mfgtools/commit/f4578c351ed167aeafa3001e7042b2c0210155df) - 2022-04-11
+- nxp-imx / mfgtools - [Fix uuu_version in generated uuu.inputlog in shell mode](https://github.com/nxp-imx/mfgtools/commit/1dc59a15bae7f52e70c8d5b7b790bcfd7960bdaa) - 2022-04-17
+- nxp-imx / mfgtools - [Fix argument names in print_cfg()](https://github.com/nxp-imx/mfgtools/commit/f4578c351ed167aeafa3001e7042b2c0210155df) - 2022-04-11
 
 
