@@ -16,6 +16,7 @@ https://github.com/autarch/autarch.
 
 ## Recent Commits
 
+- yestyle / extract-ikconfig-rs - [No need to install toolchain in GitHub Actions](https://github.com/yestyle/extract-ikconfig-rs/commit/00285b64ec8f283ee0c1438c703a655e2a93d458) - 2023-02-06
 - yestyle / hexrw - [Add more info in README.md and Cargo.toml](https://github.com/yestyle/hexrw/commit/4fbf79cead21a96a63ab02e4f22c7aa85554d083) - 2023-02-05
 - yestyle / hexrw - [Add GitHub Actions](https://github.com/yestyle/hexrw/commit/ef5e8b9b81652e2422404f58d2be96a15f346223) - 2023-02-05
 - yestyle / yestyle - [Use unescaped formatter of TinyTemplate to have human-readable README.md](https://github.com/yestyle/yestyle/commit/3269e64daaebf83228015b7ac9ab510828dd6b30) - 2023-02-03
@@ -26,14 +27,11 @@ https://github.com/autarch/autarch.
 - yestyle / hexrw - [Replace clap with argh](https://github.com/yestyle/hexrw/commit/3bae947bed843fbfc035990d4772189bcb1d260c) - 2023-01-31
 - yestyle / extract-ikconfig-rs - [Move other search methods to test config](https://github.com/yestyle/extract-ikconfig-rs/commit/ed3e7bf9aec9085942e5fd3739bb901c33266f7c) - 2023-01-30
 - yestyle / extract-ikconfig-rs - [Bump version to 0.1.7](https://github.com/yestyle/extract-ikconfig-rs/commit/06774be09ad8a902d48b80a4820a91e8f0774e2a) - 2023-01-30
-- yestyle / extract-ikconfig-rs - [Update lz4_flex to 0.10.0 to include legacy frame decompression support](https://github.com/yestyle/extract-ikconfig-rs/commit/fb1df0da76b50d61fdc814a0bbc611a55d547f05) - 2023-01-30
 - PSeitz / lz4_flex - [Add a test case for legacy frames decompression](https://github.com/PSeitz/lz4_flex/commit/9f4f79da5dc8d634861b26766fa04f18ff936dfe) - 2023-01-30
 - PSeitz / lz4_flex - [Add support of decoding legacy frames](https://github.com/PSeitz/lz4_flex/commit/ca5bd41bd244a12b5f98eb6bcda1feece0673e96) - 2023-01-30
-- yestyle / hexrw - [Add support to read after write and delay](https://github.com/yestyle/hexrw/commit/d9e76d786df50140833209d7c58c02238fdb38f8) - 2023-01-27
 - yestyle / yestyle - [Upgrade rss to 2.0.2 to fix future incompatibilities warnings in quic…](https://github.com/yestyle/yestyle/commit/c57b0bd4651f04e85c06b77e9ffe30aa05d5e09a) - 2023-01-27
 - yestyle / hexsearch - [Add GitHub Actions on main branch](https://github.com/yestyle/hexsearch/commit/c3b3626309aa7f7288362c128b5b87cd4f18086f) - 2023-01-24
 - yestyle / yestyle - [Use the already-installed rust toolchain in github actions](https://github.com/yestyle/yestyle/commit/6a409f95448c24fc0626169b6cf07504561d9847) - 2023-01-19
-- yestyle / yestyle - [Tweak wording in profile text](https://github.com/yestyle/yestyle/commit/f5099d4027e5dddf29aa55eb49a47dace65a53d6) - 2023-01-17
 - yestyle / imx-vpuwrap-rs - [Bump version to 0.1.1](https://github.com/yestyle/imx-vpuwrap-rs/commit/f48a03983d4f1900930ba65cc88dab0e6beea7f4) - 2022-12-22
 - yestyle / imx-vpuwrap-rs - [Fix URLs in Cargo.toml and add all target directory to .gitignore](https://github.com/yestyle/imx-vpuwrap-rs/commit/17d648827f477d146c13ef8d1df1118ff04f9248) - 2022-12-22
 - yestyle / imx-vpuwrap-rs - [Initial commit](https://github.com/yestyle/imx-vpuwrap-rs/commit/48058f5c08fc60c9dee0ba0485118a763ffd03cb) - 2022-12-22
