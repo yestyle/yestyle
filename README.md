@@ -16,6 +16,8 @@ https://github.com/autarch/autarch.
 
 ## Recent Commits
 
+- yestyle / hexrw - [Add more info in README.md and Cargo.toml](https://github.com/yestyle/hexrw/commit/4fbf79cead21a96a63ab02e4f22c7aa85554d083) - 2023-02-05
+- yestyle / hexrw - [Add GitHub Actions](https://github.com/yestyle/hexrw/commit/ef5e8b9b81652e2422404f58d2be96a15f346223) - 2023-02-05
 - yestyle / yestyle - [Use unescaped formatter of TinyTemplate to have human-readable README.md](https://github.com/yestyle/yestyle/commit/3269e64daaebf83228015b7ac9ab510828dd6b30) - 2023-02-03
 - yestyle / yestyle - [Add spaces around slash in recent commits to have better visibility](https://github.com/yestyle/yestyle/commit/5cc131edede1fb461a7fa109ff6695b00d39e2c8) - 2023-02-01
 - yestyle / extract-ikconfig-rs - [Replace clap with argh to save ~240KB binary size](https://github.com/yestyle/extract-ikconfig-rs/commit/a03813261f2824594ae428560e3dffebedc6ee83) - 2023-01-31
@@ -42,9 +44,7 @@ https://github.com/autarch/autarch.
 - yestyle / hexsearch - [Update README.md for multiple files searching](https://github.com/yestyle/hexsearch/commit/4e988a1b5ac9d0cac883da72d99a3b62a893107a) - 2022-12-11
 - yestyle / hexsearch - [Add -V/--version argument](https://github.com/yestyle/hexsearch/commit/7df1b7ddfdaf02b9a71003dadb36e69b080a6de6) - 2022-12-09
 - yestyle / hexsearch - [Fix multiple matches within one buffer](https://github.com/yestyle/hexsearch/commit/9e48825ce19eef9442cfb6ad2c7e70056f487af2) - 2022-12-09
-- yestyle / hexrw - [Quick implementation of writing binary data in hex format to file](https://github.com/yestyle/hexrw/commit/9b6ace47b92ddee10514cd5545da2dbf5e5c7c49) - 2022-12-06
 - yestyle / hexsearch - [Update README.md for installing from crates.io](https://github.com/yestyle/hexsearch/commit/cbc1e499df397693ae7b405277be90b8ec771689) - 2022-12-05
-- yestyle / sudoku-solver - [Initial commit](https://github.com/yestyle/sudoku-solver/commit/8c6d804a7e50c24578f8db1027bdeca9d37247d3) - 2022-06-13
 - nxp-imx / mfgtools - [Fix uuu_version in generated uuu.inputlog in shell mode](https://github.com/nxp-imx/mfgtools/commit/1dc59a15bae7f52e70c8d5b7b790bcfd7960bdaa) - 2022-04-17
 - nxp-imx / mfgtools - [Fix argument names in print_cfg()](https://github.com/nxp-imx/mfgtools/commit/f4578c351ed167aeafa3001e7042b2c0210155df) - 2022-04-11
 
