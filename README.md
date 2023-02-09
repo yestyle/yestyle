@@ -16,6 +16,7 @@ https://github.com/autarch/autarch.
 
 ## Recent Commits
 
+- yestyle / imx-vpuwrap-rs - [Add imx-vpuwrap as a submodule](https://github.com/yestyle/imx-vpuwrap-rs/commit/745e0df51c02b0714c4ee591ab433978c240a600) - 2023-02-08
 - yestyle / extract-ikconfig-rs - [No need to install toolchain in GitHub Actions](https://github.com/yestyle/extract-ikconfig-rs/commit/00285b64ec8f283ee0c1438c703a655e2a93d458) - 2023-02-06
 - yestyle / hexrw - [Add more info in README.md and Cargo.toml](https://github.com/yestyle/hexrw/commit/4fbf79cead21a96a63ab02e4f22c7aa85554d083) - 2023-02-05
 - yestyle / hexrw - [Add GitHub Actions](https://github.com/yestyle/hexrw/commit/ef5e8b9b81652e2422404f58d2be96a15f346223) - 2023-02-05
