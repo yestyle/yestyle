@@ -16,6 +16,7 @@ https://github.com/autarch/autarch.
 
 ## Recent Commits
 
+- yestyle / hexrw - [Set license instead of license-file in Cargo.toml](https://github.com/yestyle/hexrw/commit/cb041b93542f3d24cb1daf4bbcc6837cb034ccaf) - 2023-02-10
 - yestyle / imx-vpuwrap-rs - [Add an initial bindings of utils.h and vpu_wrapper.h](https://github.com/yestyle/imx-vpuwrap-rs/commit/a3378fa0cf3da73b5e762e3d7bb867a7a834dafc) - 2023-02-09
 - yestyle / imx-vpuwrap-rs - [Add imx-vpuwrap as a submodule](https://github.com/yestyle/imx-vpuwrap-rs/commit/745e0df51c02b0714c4ee591ab433978c240a600) - 2023-02-08
 - yestyle / extract-ikconfig-rs - [No need to install toolchain in GitHub Actions](https://github.com/yestyle/extract-ikconfig-rs/commit/00285b64ec8f283ee0c1438c703a655e2a93d458) - 2023-02-06
@@ -26,7 +27,6 @@ https://github.com/autarch/autarch.
 - yestyle / extract-ikconfig-rs - [Replace clap with argh to save ~240KB binary size](https://github.com/yestyle/extract-ikconfig-rs/commit/a03813261f2824594ae428560e3dffebedc6ee83) - 2023-01-31
 - yestyle / extract-ikconfig-rs - [Only enable frame and checked-decode feature in lz4_flex](https://github.com/yestyle/extract-ikconfig-rs/commit/3d70650710fbc7e96b8d455d4336b5e5e3dd6c05) - 2023-01-31
 - yestyle / hexrw - [Optimize release build to have smaller binary size](https://github.com/yestyle/hexrw/commit/fc55a72cc7fbf4844a79b5aefc17aa7cb6ec77be) - 2023-01-31
-- yestyle / hexrw - [Replace clap with argh](https://github.com/yestyle/hexrw/commit/3bae947bed843fbfc035990d4772189bcb1d260c) - 2023-01-31
 - yestyle / extract-ikconfig-rs - [Move other search methods to test config](https://github.com/yestyle/extract-ikconfig-rs/commit/ed3e7bf9aec9085942e5fd3739bb901c33266f7c) - 2023-01-30
 - yestyle / extract-ikconfig-rs - [Bump version to 0.1.7](https://github.com/yestyle/extract-ikconfig-rs/commit/06774be09ad8a902d48b80a4820a91e8f0774e2a) - 2023-01-30
 - PSeitz / lz4_flex - [Add a test case for legacy frames decompression](https://github.com/PSeitz/lz4_flex/commit/9f4f79da5dc8d634861b26766fa04f18ff936dfe) - 2023-01-30
@@ -44,7 +44,6 @@ https://github.com/autarch/autarch.
 - yestyle / hexsearch - [Update README.md for multiple files searching](https://github.com/yestyle/hexsearch/commit/4e988a1b5ac9d0cac883da72d99a3b62a893107a) - 2022-12-11
 - yestyle / hexsearch - [Add -V/--version argument](https://github.com/yestyle/hexsearch/commit/7df1b7ddfdaf02b9a71003dadb36e69b080a6de6) - 2022-12-09
 - yestyle / hexsearch - [Fix multiple matches within one buffer](https://github.com/yestyle/hexsearch/commit/9e48825ce19eef9442cfb6ad2c7e70056f487af2) - 2022-12-09
-- yestyle / hexsearch - [Update README.md for installing from crates.io](https://github.com/yestyle/hexsearch/commit/cbc1e499df397693ae7b405277be90b8ec771689) - 2022-12-05
 - nxp-imx / mfgtools - [Fix uuu_version in generated uuu.inputlog in shell mode](https://github.com/nxp-imx/mfgtools/commit/1dc59a15bae7f52e70c8d5b7b790bcfd7960bdaa) - 2022-04-17
 - nxp-imx / mfgtools - [Fix argument names in print_cfg()](https://github.com/nxp-imx/mfgtools/commit/f4578c351ed167aeafa3001e7042b2c0210155df) - 2022-04-11
 
