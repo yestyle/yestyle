@@ -16,19 +16,20 @@ https://github.com/autarch/autarch.
 
 ## Recent Commits
 
+- yestyle / extract-ikconfig-rs - [Install lzop used in extract-ikconfig shell script for cargo test in …](https://github.com/yestyle/extract-ikconfig-rs/commit/73a81248611345fe462bf75b2630a0ef4bc97f94) - 2023-02-12
+- yestyle / extract-ikconfig-rs - [Fix clippy warnings found in GitHub CI](https://github.com/yestyle/extract-ikconfig-rs/commit/2c3b54537f5291de6ed7d4b1d6b41cf716d04107) - 2023-02-12
+- yestyle / extract-ikconfig-rs - [Update README.md](https://github.com/yestyle/extract-ikconfig-rs/commit/53d3bf0dc7113a805038385e150850fcfa38ce72) - 2023-02-12
+- yestyle / extract-ikconfig-rs - [Fix clippy warnings and errors](https://github.com/yestyle/extract-ikconfig-rs/commit/00a508bc828bf6df77bd9bf51660e1e7a3a1d87d) - 2023-02-12
+- yestyle / extract-ikconfig-rs - [Add lzo-compressed vmlinux and test cases](https://github.com/yestyle/extract-ikconfig-rs/commit/47a7e49cef8a2433d0b71ff5b1b0a9cf609e6f06) - 2023-02-12
 - yestyle / hexrw - [Set license instead of license-file in Cargo.toml](https://github.com/yestyle/hexrw/commit/cb041b93542f3d24cb1daf4bbcc6837cb034ccaf) - 2023-02-10
 - yestyle / imx-vpuwrap-rs - [Add an initial bindings of utils.h and vpu_wrapper.h](https://github.com/yestyle/imx-vpuwrap-rs/commit/a3378fa0cf3da73b5e762e3d7bb867a7a834dafc) - 2023-02-09
 - yestyle / imx-vpuwrap-rs - [Add imx-vpuwrap as a submodule](https://github.com/yestyle/imx-vpuwrap-rs/commit/745e0df51c02b0714c4ee591ab433978c240a600) - 2023-02-08
-- yestyle / extract-ikconfig-rs - [No need to install toolchain in GitHub Actions](https://github.com/yestyle/extract-ikconfig-rs/commit/00285b64ec8f283ee0c1438c703a655e2a93d458) - 2023-02-06
+- yestyle / hexrw - [No need to install toolchain in GitHub Actions](https://github.com/yestyle/hexrw/commit/b31c78ee90bb5c5ea4231d12cf37ccf1c739ae47) - 2023-02-06
 - yestyle / hexrw - [Add more info in README.md and Cargo.toml](https://github.com/yestyle/hexrw/commit/4fbf79cead21a96a63ab02e4f22c7aa85554d083) - 2023-02-05
 - yestyle / hexrw - [Add GitHub Actions](https://github.com/yestyle/hexrw/commit/ef5e8b9b81652e2422404f58d2be96a15f346223) - 2023-02-05
 - yestyle / yestyle - [Use unescaped formatter of TinyTemplate to have human-readable README.md](https://github.com/yestyle/yestyle/commit/3269e64daaebf83228015b7ac9ab510828dd6b30) - 2023-02-03
 - yestyle / yestyle - [Add spaces around slash in recent commits to have better visibility](https://github.com/yestyle/yestyle/commit/5cc131edede1fb461a7fa109ff6695b00d39e2c8) - 2023-02-01
-- yestyle / extract-ikconfig-rs - [Replace clap with argh to save ~240KB binary size](https://github.com/yestyle/extract-ikconfig-rs/commit/a03813261f2824594ae428560e3dffebedc6ee83) - 2023-01-31
-- yestyle / extract-ikconfig-rs - [Only enable frame and checked-decode feature in lz4_flex](https://github.com/yestyle/extract-ikconfig-rs/commit/3d70650710fbc7e96b8d455d4336b5e5e3dd6c05) - 2023-01-31
 - yestyle / hexrw - [Optimize release build to have smaller binary size](https://github.com/yestyle/hexrw/commit/fc55a72cc7fbf4844a79b5aefc17aa7cb6ec77be) - 2023-01-31
-- yestyle / extract-ikconfig-rs - [Move other search methods to test config](https://github.com/yestyle/extract-ikconfig-rs/commit/ed3e7bf9aec9085942e5fd3739bb901c33266f7c) - 2023-01-30
-- yestyle / extract-ikconfig-rs - [Bump version to 0.1.7](https://github.com/yestyle/extract-ikconfig-rs/commit/06774be09ad8a902d48b80a4820a91e8f0774e2a) - 2023-01-30
 - PSeitz / lz4_flex - [Add a test case for legacy frames decompression](https://github.com/PSeitz/lz4_flex/commit/9f4f79da5dc8d634861b26766fa04f18ff936dfe) - 2023-01-30
 - PSeitz / lz4_flex - [Add support of decoding legacy frames](https://github.com/PSeitz/lz4_flex/commit/ca5bd41bd244a12b5f98eb6bcda1feece0673e96) - 2023-01-30
 - yestyle / yestyle - [Upgrade rss to 2.0.2 to fix future incompatibilities warnings in quic…](https://github.com/yestyle/yestyle/commit/c57b0bd4651f04e85c06b77e9ffe30aa05d5e09a) - 2023-01-27
