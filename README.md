@@ -16,11 +16,11 @@ https://github.com/autarch/autarch.
 
 ## Recent Commits
 
+- yestyle / extract-ikconfig-rs - [Bump version to 0.2.0](https://github.com/yestyle/extract-ikconfig-rs/commit/1bace321d72afc7d91e3f082170b291cba22baf7) - 2023-02-12
+- yestyle / extract-ikconfig-rs - [Update README.md for integration tests](https://github.com/yestyle/extract-ikconfig-rs/commit/fbc406ae346a53a14b2c1f41cdd263c1150bd4bf) - 2023-02-12
 - yestyle / extract-ikconfig-rs - [Install lzop used in extract-ikconfig shell script for cargo test in …](https://github.com/yestyle/extract-ikconfig-rs/commit/73a81248611345fe462bf75b2630a0ef4bc97f94) - 2023-02-12
 - yestyle / extract-ikconfig-rs - [Fix clippy warnings found in GitHub CI](https://github.com/yestyle/extract-ikconfig-rs/commit/2c3b54537f5291de6ed7d4b1d6b41cf716d04107) - 2023-02-12
 - yestyle / extract-ikconfig-rs - [Update README.md](https://github.com/yestyle/extract-ikconfig-rs/commit/53d3bf0dc7113a805038385e150850fcfa38ce72) - 2023-02-12
-- yestyle / extract-ikconfig-rs - [Fix clippy warnings and errors](https://github.com/yestyle/extract-ikconfig-rs/commit/00a508bc828bf6df77bd9bf51660e1e7a3a1d87d) - 2023-02-12
-- yestyle / extract-ikconfig-rs - [Add lzo-compressed vmlinux and test cases](https://github.com/yestyle/extract-ikconfig-rs/commit/47a7e49cef8a2433d0b71ff5b1b0a9cf609e6f06) - 2023-02-12
 - yestyle / hexrw - [Set license instead of license-file in Cargo.toml](https://github.com/yestyle/hexrw/commit/cb041b93542f3d24cb1daf4bbcc6837cb034ccaf) - 2023-02-10
 - yestyle / imx-vpuwrap-rs - [Add an initial bindings of utils.h and vpu_wrapper.h](https://github.com/yestyle/imx-vpuwrap-rs/commit/a3378fa0cf3da73b5e762e3d7bb867a7a834dafc) - 2023-02-09
 - yestyle / imx-vpuwrap-rs - [Add imx-vpuwrap as a submodule](https://github.com/yestyle/imx-vpuwrap-rs/commit/745e0df51c02b0714c4ee591ab433978c240a600) - 2023-02-08
