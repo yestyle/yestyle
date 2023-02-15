@@ -16,6 +16,7 @@ https://github.com/autarch/autarch.
 
 ## Recent Commits
 
+- rust-lang / flate2-rs - [Fix a typo in doc for write::GzDecoder](https://github.com/rust-lang/flate2-rs/commit/146b12cb9720e336ffaadad82f2b77020c1ab11a) - 2023-02-14
 - yestyle / extract-ikconfig-rs - [Bump version to 0.2.0](https://github.com/yestyle/extract-ikconfig-rs/commit/1bace321d72afc7d91e3f082170b291cba22baf7) - 2023-02-12
 - yestyle / extract-ikconfig-rs - [Update README.md for integration tests](https://github.com/yestyle/extract-ikconfig-rs/commit/fbc406ae346a53a14b2c1f41cdd263c1150bd4bf) - 2023-02-12
 - yestyle / extract-ikconfig-rs - [Install lzop used in extract-ikconfig shell script for cargo test in …](https://github.com/yestyle/extract-ikconfig-rs/commit/73a81248611345fe462bf75b2630a0ef4bc97f94) - 2023-02-12
