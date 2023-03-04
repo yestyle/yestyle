@@ -16,7 +16,7 @@ https://github.com/autarch/autarch.
 
 ## Recent Commits
 
-- yestyle / extract-ikconfig-rs - [Treat warnings as errors when running cargo clippy in GitHub Actions](https://github.com/yestyle/extract-ikconfig-rs/commit/58560dabc51a06fd82226151a4b34651882a51cb) - 2023-02-28
+- yestyle / hexsearch - [Treat warnings as errors when running cargo clippy in GitHub Actions](https://github.com/yestyle/hexsearch/commit/63431465c677d157f4e8a2314fb8ab7c4cfd2ea0) - 2023-03-03
 - yestyle / extract-ikconfig-rs - [Update tempfile to fix race condition in remove_dir_all](https://github.com/yestyle/extract-ikconfig-rs/commit/f8eb1e87cb7ba13082c1ceb3f5f0340babbd0ddd) - 2023-02-28
 - rust-lang / flate2-rs - [Fix a typo in doc for write::GzDecoder](https://github.com/rust-lang/flate2-rs/commit/146b12cb9720e336ffaadad82f2b77020c1ab11a) - 2023-02-14
 - yestyle / extract-ikconfig-rs - [Bump version to 0.2.0](https://github.com/yestyle/extract-ikconfig-rs/commit/1bace321d72afc7d91e3f082170b291cba22baf7) - 2023-02-12
@@ -45,7 +45,6 @@ https://github.com/autarch/autarch.
 - yestyle / custom-printer-lib - [Initial commit](https://github.com/yestyle/custom-printer-lib/commit/4f08079a9c354f25145abb66144eb8767474ed13) - 2022-12-19
 - yestyle / hexsearch - [Update README.md for multiple files searching](https://github.com/yestyle/hexsearch/commit/4e988a1b5ac9d0cac883da72d99a3b62a893107a) - 2022-12-11
 - yestyle / hexsearch - [Add -V/--version argument](https://github.com/yestyle/hexsearch/commit/7df1b7ddfdaf02b9a71003dadb36e69b080a6de6) - 2022-12-09
-- yestyle / hexsearch - [Fix multiple matches within one buffer](https://github.com/yestyle/hexsearch/commit/9e48825ce19eef9442cfb6ad2c7e70056f487af2) - 2022-12-09
 - nxp-imx / mfgtools - [Fix uuu_version in generated uuu.inputlog in shell mode](https://github.com/nxp-imx/mfgtools/commit/1dc59a15bae7f52e70c8d5b7b790bcfd7960bdaa) - 2022-04-17
 - nxp-imx / mfgtools - [Fix argument names in print_cfg()](https://github.com/nxp-imx/mfgtools/commit/f4578c351ed167aeafa3001e7042b2c0210155df) - 2022-04-11
 
