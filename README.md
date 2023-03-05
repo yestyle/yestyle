@@ -16,12 +16,13 @@ https://github.com/autarch/autarch.
 
 ## Recent Commits
 
+- nxp-imx / mfgtools - [Fix segfault when boot data is zero in SDP](https://github.com/nxp-imx/mfgtools/commit/a35cb8de99300b8a135caf95917b0782c2bede89) - 2023-03-05
+- yestyle / extract-ikconfig-rs - [Move all test functions into tests module](https://github.com/yestyle/extract-ikconfig-rs/commit/3ed2015bd474f4d74f6917ca962eb5c61f57353e) - 2023-03-04
 - yestyle / hexsearch - [Treat warnings as errors when running cargo clippy in GitHub Actions](https://github.com/yestyle/hexsearch/commit/63431465c677d157f4e8a2314fb8ab7c4cfd2ea0) - 2023-03-03
 - yestyle / extract-ikconfig-rs - [Update tempfile to fix race condition in remove_dir_all](https://github.com/yestyle/extract-ikconfig-rs/commit/f8eb1e87cb7ba13082c1ceb3f5f0340babbd0ddd) - 2023-02-28
 - rust-lang / flate2-rs - [Fix a typo in doc for write::GzDecoder](https://github.com/rust-lang/flate2-rs/commit/146b12cb9720e336ffaadad82f2b77020c1ab11a) - 2023-02-14
 - yestyle / extract-ikconfig-rs - [Bump version to 0.2.0](https://github.com/yestyle/extract-ikconfig-rs/commit/1bace321d72afc7d91e3f082170b291cba22baf7) - 2023-02-12
 - yestyle / extract-ikconfig-rs - [Update README.md for integration tests](https://github.com/yestyle/extract-ikconfig-rs/commit/fbc406ae346a53a14b2c1f41cdd263c1150bd4bf) - 2023-02-12
-- yestyle / extract-ikconfig-rs - [Install lzop used in extract-ikconfig shell script for cargo test in …](https://github.com/yestyle/extract-ikconfig-rs/commit/73a81248611345fe462bf75b2630a0ef4bc97f94) - 2023-02-12
 - yestyle / hexrw - [Set license instead of license-file in Cargo.toml](https://github.com/yestyle/hexrw/commit/cb041b93542f3d24cb1daf4bbcc6837cb034ccaf) - 2023-02-10
 - yestyle / imx-vpuwrap-rs - [Add an initial bindings of utils.h and vpu_wrapper.h](https://github.com/yestyle/imx-vpuwrap-rs/commit/a3378fa0cf3da73b5e762e3d7bb867a7a834dafc) - 2023-02-09
 - yestyle / imx-vpuwrap-rs - [Add imx-vpuwrap as a submodule](https://github.com/yestyle/imx-vpuwrap-rs/commit/745e0df51c02b0714c4ee591ab433978c240a600) - 2023-02-08
