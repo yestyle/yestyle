@@ -16,6 +16,8 @@ https://github.com/autarch/autarch.
 
 ## Recent Commits
 
+- nxp-imx / mfgtools - [Fix issues when file size isn't divisible by block size in fastboot](https://github.com/nxp-imx/mfgtools/commit/8c52019d305895401a053d2f73cacfbd671ed24f) - 2023-03-06
+- nxp-imx / mfgtools - [Fix issues when m_skip is not zero in fastboot](https://github.com/nxp-imx/mfgtools/commit/e995872533fe9ef156a65d1f3ea830b8083b22c3) - 2023-03-06
 - nxp-imx / mfgtools - [Fix segfault when boot data is zero in SDP](https://github.com/nxp-imx/mfgtools/commit/a35cb8de99300b8a135caf95917b0782c2bede89) - 2023-03-05
 - yestyle / extract-ikconfig-rs - [Move all test functions into tests module](https://github.com/yestyle/extract-ikconfig-rs/commit/3ed2015bd474f4d74f6917ca962eb5c61f57353e) - 2023-03-04
 - yestyle / hexsearch - [Treat warnings as errors when running cargo clippy in GitHub Actions](https://github.com/yestyle/hexsearch/commit/63431465c677d157f4e8a2314fb8ab7c4cfd2ea0) - 2023-03-03
