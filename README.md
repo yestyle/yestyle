@@ -7,20 +7,15 @@ https://github.com/autarch/autarch.
 
 ## Recent Blog Posts
 
-- [Dual boot Manjaro Linux with Windows 11](https://blog.lancitou.net/dual-boot-manjaro-linux-with-windows-11/) - 2023-03-04
 - [scp command couldn't find sftp-server](https://blog.lancitou.net/scp-command-couldnt-find-sftp-server/) - 2023-02-02
 - [Resolution 2023 (Philip)](https://blog.lancitou.net/resolution-2023-philip/) - 2023-01-13
 - [Resolution 2022 (Philip)](https://blog.lancitou.net/resolution-2022-philip/) - 2022-06-24
 - [Getting all IP addresses in Qt](https://blog.lancitou.net/getting-all-ip-addresses-in-qt/) - 2021-05-16
+- [Host Hugo as GitHub Pages](https://blog.lancitou.net/host-hugo-as-github-pages/) - 2021-05-16
 
 
 ## Recent Commits
 
-- yestyle / yestyle.github.io - [Remove all draft posts](https://github.com/yestyle/yestyle.github.io/commit/0fe351399be37540bcdce89bfe6a62fb1846d412) - 2023-04-22
-- yestyle / yestyle.github.io - [Mark dual-boot-manjaro-linux-with-windows-11.md as draft](https://github.com/yestyle/yestyle.github.io/commit/9897b31fd366050914f8151cc9699d4f3fe4cc73) - 2023-04-22
-- yestyle / yestyle.github.io - [Add CNAME file](https://github.com/yestyle/yestyle.github.io/commit/6ebe1d5e330b8d578f02657fd839cf719eebb50b) - 2023-04-22
-- yestyle / yestyle.github.io - [Deploy to GitHub Pages](https://github.com/yestyle/yestyle.github.io/commit/7374683e04418d18019a1180ee2a956b91aaedf6) - 2023-04-22
-- yestyle / yestyle.github.io - [Remove some social media information of authors](https://github.com/yestyle/yestyle.github.io/commit/a49cb33d683bdab6b0497d11a558a20dff394216) - 2023-04-22
 - nxp-imx / mfgtools - [Fix issues when file size isn't divisible by block size in fastboot](https://github.com/nxp-imx/mfgtools/commit/8c52019d305895401a053d2f73cacfbd671ed24f) - 2023-03-06
 - nxp-imx / mfgtools - [Fix issues when m_skip is not zero in fastboot](https://github.com/nxp-imx/mfgtools/commit/e995872533fe9ef156a65d1f3ea830b8083b22c3) - 2023-03-06
 - nxp-imx / mfgtools - [Fix segfault when boot data is zero in SDP](https://github.com/nxp-imx/mfgtools/commit/a35cb8de99300b8a135caf95917b0782c2bede89) - 2023-03-05
