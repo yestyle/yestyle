@@ -16,6 +16,7 @@ https://github.com/autarch/autarch.
 
 ## Recent Commits
 
+- yestyle / yestyle - [Scrapping blog posts from author page instead of RSS feed](https://github.com/yestyle/yestyle/commit/5e916f074c13724ed31788065ef8e36399275210) - 2023-05-09
 - yestyle / yestyle - [Update README.md manually](https://github.com/yestyle/yestyle/commit/5881fb8f718a3d8c5f94738b5bfaaacfec7a7302) - 2023-04-23
 - nxp-imx / mfgtools - [Fix issues when file size isn't divisible by block size in fastboot](https://github.com/nxp-imx/mfgtools/commit/8c52019d305895401a053d2f73cacfbd671ed24f) - 2023-03-06
 - nxp-imx / mfgtools - [Fix issues when m_skip is not zero in fastboot](https://github.com/nxp-imx/mfgtools/commit/e995872533fe9ef156a65d1f3ea830b8083b22c3) - 2023-03-06
@@ -37,7 +38,6 @@ https://github.com/autarch/autarch.
 - yestyle / hexrw - [Optimize release build to have smaller binary size](https://github.com/yestyle/hexrw/commit/fc55a72cc7fbf4844a79b5aefc17aa7cb6ec77be) - 2023-01-31
 - PSeitz / lz4_flex - [Add a test case for legacy frames decompression](https://github.com/PSeitz/lz4_flex/commit/9f4f79da5dc8d634861b26766fa04f18ff936dfe) - 2023-01-30
 - PSeitz / lz4_flex - [Add support of decoding legacy frames](https://github.com/PSeitz/lz4_flex/commit/ca5bd41bd244a12b5f98eb6bcda1feece0673e96) - 2023-01-30
-- yestyle / yestyle - [Upgrade rss to 2.0.2 to fix future incompatibilities warnings in quic…](https://github.com/yestyle/yestyle/commit/c57b0bd4651f04e85c06b77e9ffe30aa05d5e09a) - 2023-01-27
 - yestyle / hexsearch - [Add GitHub Actions on main branch](https://github.com/yestyle/hexsearch/commit/c3b3626309aa7f7288362c128b5b87cd4f18086f) - 2023-01-24
 - yestyle / imx-vpuwrap-rs - [Bump version to 0.1.1](https://github.com/yestyle/imx-vpuwrap-rs/commit/f48a03983d4f1900930ba65cc88dab0e6beea7f4) - 2022-12-22
 - yestyle / imx-vpuwrap-rs - [Fix URLs in Cargo.toml and add all target directory to .gitignore](https://github.com/yestyle/imx-vpuwrap-rs/commit/17d648827f477d146c13ef8d1df1118ff04f9248) - 2022-12-22
