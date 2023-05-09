@@ -1,7 +1,7 @@
 use anyhow::Result;
 use graphql_client::{reqwest::post_graphql, GraphQLQuery, Response};
 use reqwest::Client;
-use rss::Channel;
+use scraper::{Html, Selector};
 use serde_derive::Serialize;
 use std::{env, fs::File, io::Write, path::PathBuf};
 use tinytemplate::TinyTemplate;
@@ -194,31 +194,30 @@ async fn main() -> Result<()> {
 }
 
 async fn blog_posts() -> Result<Vec<BlogPost>> {
-    let content = reqwest::get("https://blog.lancitou.net/feed")
+    let content = reqwest::get("https://blog.lancitou.net/authors/philip_ye/")
         .await?
-        .bytes()
+        .text()
         .await?;
-    let channel = Channel::read_from(&content[..])?;
-    channel
-        .items
-        .into_iter()
-        .filter(|i| i.author().is_some() && i.author().unwrap() == "Philip Ye")
-        .map(|i| {
-            let title = i
-                .title()
-                .unwrap_or_else(|| panic!("Blog post has no title"));
-            let dt = chrono::DateTime::parse_from_rfc2822(
-                i.pub_date()
-                    .as_ref()
-                    .unwrap_or_else(|| panic!("Blog post '{title}', has no publication date")),
-            )?;
+
+    let document = Html::parse_document(content.as_str());
+    let nav_selector = Selector::parse(r#"nav[class="list-item"]"#).unwrap();
+    let a_selector = Selector::parse("a").unwrap();
+    let span_selector = Selector::parse("span").unwrap();
+
+    document
+        .select(&nav_selector)
+        .map(|nav| {
+            let a = nav.select(&a_selector).next().unwrap();
+            let span = nav.select(&span_selector).next().unwrap();
+
+            let title = a.inner_html();
+            let date = span.inner_html();
+            let url = a.value().attr("href").unwrap();
+
             Ok(BlogPost {
-                title: title.to_string(),
-                date: dt.date().format(DATE_FORMAT).to_string(),
-                url: i
-                    .link()
-                    .unwrap_or_else(|| panic!("Blog post '{title}', has no link"))
-                    .to_string(),
+                title,
+                date,
+                url: url.to_string(),
             })
         })
         .collect::<Vec<_>>()

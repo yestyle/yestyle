@@ -14,7 +14,7 @@ anyhow = "1.0.57"
 chrono = "0.4.19"
 graphql_client = { version = "0.10.0", features = ["reqwest"] }
 reqwest = "0.11.10"
-rss = "2.0.2"
+scraper = "0.16.0"
 serde = "1.0.137"
 serde_derive = "1.0.137"
 tinytemplate = "1.2.1"
