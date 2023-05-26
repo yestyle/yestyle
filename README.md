@@ -7,11 +7,11 @@ https://github.com/autarch/autarch.
 
 ## Recent Blog Posts
 
+- [Share a device between two drivers](https://blog.lancitou.net/share-a-device-between-two-drivers/) - 2023-05-25
 - [Dual boot Manjaro Linux with Windows 11](https://blog.lancitou.net/dual-boot-manjaro-linux-with-windows-11/) - 2023-04-25
 - [scp command couldn't find sftp-server](https://blog.lancitou.net/scp-command-couldnt-find-sftp-server/) - 2023-02-02
 - [Resolution 2023 (Philip)](https://blog.lancitou.net/resolution-2023-philip/) - 2023-01-13
 - [Resolution 2022 (Philip)](https://blog.lancitou.net/resolution-2022-philip/) - 2022-06-24
-- [Getting all IP addresses in Qt](https://blog.lancitou.net/getting-all-ip-addresses-in-qt/) - 2021-05-16
 
 
 ## Recent Commits
