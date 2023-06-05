@@ -7,11 +7,11 @@ https://github.com/autarch/autarch.
 
 ## Recent Blog Posts
 
+- [Popup window repositioning in weston](https://blog.lancitou.net/popup-window-repositioning-in-weston/) - 2023-06-04
 - [RTS / CTS of UART in i.MX8](https://blog.lancitou.net/rts-cts-of-uart-in-imx8/) - 2023-06-03
 - [Enable SPL with HAB for i.MX6](https://blog.lancitou.net/enable-spl-with-hab-for-imx6/) - 2023-05-29
 - [Share a device between two drivers](https://blog.lancitou.net/share-a-device-between-two-drivers/) - 2023-05-25
 - [Dual boot Manjaro Linux with Windows 11](https://blog.lancitou.net/dual-boot-manjaro-linux-with-windows-11/) - 2023-04-25
-- [scp command couldn't find sftp-server](https://blog.lancitou.net/scp-command-couldnt-find-sftp-server/) - 2023-02-02
 
 
 ## Recent Commits
