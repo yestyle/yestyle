@@ -16,6 +16,7 @@ https://github.com/autarch/autarch.
 
 ## Recent Commits
 
+- yestyle / hexsearch - [Update clap to v4.3.19 to resolve atty vulnerability](https://github.com/yestyle/hexsearch/commit/3621d65c5ee26735e44531605aec40d0b58a7f39) - 2023-07-24
 - yestyle / yestyle - [Scrapping blog posts from author page instead of RSS feed](https://github.com/yestyle/yestyle/commit/5e916f074c13724ed31788065ef8e36399275210) - 2023-05-09
 - yestyle / yestyle - [Update README.md manually](https://github.com/yestyle/yestyle/commit/5881fb8f718a3d8c5f94738b5bfaaacfec7a7302) - 2023-04-23
 - nxp-imx / mfgtools - [Fix issues when file size isn't divisible by block size in fastboot](https://github.com/nxp-imx/mfgtools/commit/8c52019d305895401a053d2f73cacfbd671ed24f) - 2023-03-06
@@ -47,7 +48,6 @@ https://github.com/autarch/autarch.
 - yestyle / custom-printer-lib - [Add support of printing bit image and cutting paper](https://github.com/yestyle/custom-printer-lib/commit/6ca10d3b2ea5c91c56a2fa82b12f8cb45f960cfc) - 2022-12-20
 - yestyle / custom-printer-lib - [Initial commit](https://github.com/yestyle/custom-printer-lib/commit/4f08079a9c354f25145abb66144eb8767474ed13) - 2022-12-19
 - yestyle / hexsearch - [Update README.md for multiple files searching](https://github.com/yestyle/hexsearch/commit/4e988a1b5ac9d0cac883da72d99a3b62a893107a) - 2022-12-11
-- yestyle / hexsearch - [Add -V/--version argument](https://github.com/yestyle/hexsearch/commit/7df1b7ddfdaf02b9a71003dadb36e69b080a6de6) - 2022-12-09
 - nxp-imx / mfgtools - [Fix uuu_version in generated uuu.inputlog in shell mode](https://github.com/nxp-imx/mfgtools/commit/1dc59a15bae7f52e70c8d5b7b790bcfd7960bdaa) - 2022-04-17
 - nxp-imx / mfgtools - [Fix argument names in print_cfg()](https://github.com/nxp-imx/mfgtools/commit/f4578c351ed167aeafa3001e7042b2c0210155df) - 2022-04-11
 
