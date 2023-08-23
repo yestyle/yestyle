@@ -7,11 +7,11 @@ https://github.com/autarch/autarch.
 
 ## Recent Blog Posts
 
+- [雅思机考初体验](https://blog.lancitou.net/first-computer-based-ielts/) - 2023-08-22
 - [Add support of filtering step values in pipewire](https://blog.lancitou.net/add-support-of-filtering-step-values-in-pipewire/) - 2023-06-10
 - [Duplicated device in libinput](https://blog.lancitou.net/duplicated-device-in-libinput/) - 2023-06-10
 - [Popup window repositioning in weston](https://blog.lancitou.net/popup-window-repositioning-in-weston/) - 2023-06-04
 - [RTS / CTS of UART in i.MX8](https://blog.lancitou.net/rts-cts-of-uart-in-imx8/) - 2023-06-03
-- [Enable SPL with HAB for i.MX6](https://blog.lancitou.net/enable-spl-with-hab-for-imx6/) - 2023-05-29
 
 
 ## Recent Commits
