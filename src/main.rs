@@ -221,7 +221,7 @@ async fn blog_posts() -> Result<Vec<BlogPost>> {
             })
         })
         .collect::<Vec<_>>()
-        .splice(0..5, None)
+        .splice(0..10, None)
         .collect::<Result<Vec<_>>>()
 }
 
