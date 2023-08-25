@@ -12,10 +12,16 @@ https://github.com/autarch/autarch.
 - [Duplicated device in libinput](https://blog.lancitou.net/duplicated-device-in-libinput/) - 2023-06-10
 - [Popup window repositioning in weston](https://blog.lancitou.net/popup-window-repositioning-in-weston/) - 2023-06-04
 - [RTS / CTS of UART in i.MX8](https://blog.lancitou.net/rts-cts-of-uart-in-imx8/) - 2023-06-03
+- [Enable SPL with HAB for i.MX6](https://blog.lancitou.net/enable-spl-with-hab-for-imx6/) - 2023-05-29
+- [Share a device between two drivers](https://blog.lancitou.net/share-a-device-between-two-drivers/) - 2023-05-25
+- [Dual boot Manjaro Linux with Windows 11](https://blog.lancitou.net/dual-boot-manjaro-linux-with-windows-11/) - 2023-04-25
+- [scp command couldn't find sftp-server](https://blog.lancitou.net/scp-command-couldnt-find-sftp-server/) - 2023-02-02
+- [Resolution 2023 (Philip)](https://blog.lancitou.net/resolution-2023-philip/) - 2023-01-13
 
 
 ## Recent Commits
 
+- yestyle / yestyle - [Show 10 recent blog posts](https://github.com/yestyle/yestyle/commit/9ee096c9cc946f3eee5e257ad5811cc39be8f3a9) - 2023-08-25
 - yestyle / hexsearch - [Update clap to v4.3.19 to resolve atty vulnerability](https://github.com/yestyle/hexsearch/commit/3621d65c5ee26735e44531605aec40d0b58a7f39) - 2023-07-24
 - yestyle / yestyle - [Scrapping blog posts from author page instead of RSS feed](https://github.com/yestyle/yestyle/commit/5e916f074c13724ed31788065ef8e36399275210) - 2023-05-09
 - yestyle / yestyle - [Update README.md manually](https://github.com/yestyle/yestyle/commit/5881fb8f718a3d8c5f94738b5bfaaacfec7a7302) - 2023-04-23
@@ -35,7 +41,6 @@ https://github.com/autarch/autarch.
 - yestyle / hexrw - [Add more info in README.md and Cargo.toml](https://github.com/yestyle/hexrw/commit/4fbf79cead21a96a63ab02e4f22c7aa85554d083) - 2023-02-05
 - yestyle / hexrw - [Add GitHub Actions](https://github.com/yestyle/hexrw/commit/ef5e8b9b81652e2422404f58d2be96a15f346223) - 2023-02-05
 - yestyle / yestyle - [Use unescaped formatter of TinyTemplate to have human-readable README.md](https://github.com/yestyle/yestyle/commit/3269e64daaebf83228015b7ac9ab510828dd6b30) - 2023-02-03
-- yestyle / yestyle - [Add spaces around slash in recent commits to have better visibility](https://github.com/yestyle/yestyle/commit/5cc131edede1fb461a7fa109ff6695b00d39e2c8) - 2023-02-01
 - yestyle / hexrw - [Optimize release build to have smaller binary size](https://github.com/yestyle/hexrw/commit/fc55a72cc7fbf4844a79b5aefc17aa7cb6ec77be) - 2023-01-31
 - PSeitz / lz4_flex - [Add a test case for legacy frames decompression](https://github.com/PSeitz/lz4_flex/commit/9f4f79da5dc8d634861b26766fa04f18ff936dfe) - 2023-01-30
 - PSeitz / lz4_flex - [Add support of decoding legacy frames](https://github.com/PSeitz/lz4_flex/commit/ca5bd41bd244a12b5f98eb6bcda1feece0673e96) - 2023-01-30
